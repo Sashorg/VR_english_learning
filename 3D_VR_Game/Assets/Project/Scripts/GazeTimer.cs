@@ -45,10 +45,11 @@ public class GazeTimer : MonoBehaviour
         gvrTimer = 0;
         imgGaze.fillAmount = 0f;
         _gazeComplete = false;
+        rd.material.color = Color.white;
     }
 
     public void gazeCompleted()
     {
-        rd.material.color = Color.red;
+        rd.material.color = Color.grey;
     }
 }
