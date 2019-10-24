@@ -5,17 +5,17 @@ using UnityEngine;
 public class CanvasBehaviour : MonoBehaviour
 {
     public GameObject gvrReticle;
-    public float test;
+    private Canvas cv;
 
     // Start is called before the first frame update
     void Start()
     {
-        //test = gvrReticle.GetComponent<CanvasBehaviour>().ReticleDistanceInMeters;
+        cv = gameObject.GetComponent<Canvas>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        cv.planeDistance = (gvrReticle.GetComponent<GvrReticlePointer>().ReticleDistanceInMeters);
     }
 }
