@@ -99,7 +99,7 @@ public class GvrReticlePointer : GvrBasePointer
     /// <inheritdoc/>
     public override void OnPointerEnter(RaycastResult raycastResultResult, bool isInteractive)
     {
-        SetPointerTarget(raycastResultResult.worldPosition, isInteractive);
+        SetPointerTarget(raycastResultResult.worldPosition, isInteractive); 
     }
 
     /// <inheritdoc/>
