@@ -50,10 +50,15 @@ public class Cube : MonoBehaviour
 
     public void gazeCompleted()
     {
+        print("Your object is"+ObjectHandler.objectToShow);
         rd.material.color = Color.grey;
-        match = gameObject.CompareTag(targetTag);
+        match = this.gameObject.CompareTag(ObjectHandler.objectToShow);
+        
         if (match)
         {
+           ObjectScript.deleteObject(ObjectHandler.objectToShow);
+            ObjectHandler.SetText();
+            
             Debug.Log("Match!");
             //Do something if match object
         }

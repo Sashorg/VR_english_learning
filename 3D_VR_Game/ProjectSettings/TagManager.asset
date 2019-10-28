@@ -8,6 +8,7 @@ TagManager:
   - chair
   - table
   - glass
+  - fork
   layers:
   - Default
   - TransparentFX

@@ -27,6 +27,6 @@ public class ExampleObj : MonoBehaviour
    
         tagitem = ObjectScript.tagit;
         print("love" + tagitem);
-        ObjectScript.deleteObject(tryout);
+     //   ObjectScript.deleteObject(tryout);
     }
 }

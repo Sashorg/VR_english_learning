@@ -8,7 +8,7 @@ public class randomPick : MonoBehaviour
     private int index = 3;//# of spawners in the scene
     public static int rnd_number;
     // Array list is for initiating all objects, the arraylst should be equal to the number of objects attached to spawner
-   public static ArrayList obj = new ArrayList{ "chair", "table", "glass" };
+   public static ArrayList obj = new ArrayList{ "chair", "fork", "glass" };
 
     // Start is called before the first frame update
     void Awake() {
