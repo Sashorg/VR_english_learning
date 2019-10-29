@@ -50,6 +50,7 @@ public class Cube : MonoBehaviour
 
     public void gazeCompleted()
     {
+        AudioManager.Instance.ObjectSound(targetTag);
         print("Your object is"+ObjectHandler.objectToShow);
         rd.material.color = Color.grey;
         match = this.gameObject.CompareTag(ObjectHandler.objectToShow);
