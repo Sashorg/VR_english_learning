@@ -9,6 +9,7 @@ TagManager:
   - table
   - glass
   - fork
+  - Reticle
   layers:
   - Default
   - TransparentFX
