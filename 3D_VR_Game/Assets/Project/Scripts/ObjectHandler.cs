@@ -11,6 +11,7 @@ public class ObjectHandler : MonoBehaviour
     static int numObject;
     static ArrayList obj;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,9 @@ public class ObjectHandler : MonoBehaviour
         // change this to "you need to find a "GameObject"  
         AudioManager.Instance.ObjectSound(objectToShow);
         obj.RemoveAt(numObject);
+
+        //U call like this 1)the name of the GamObject where to change, 2)the "name" of a new sprite.
+        //SpriteControl.Instance.NewSprite("Blackboard", "banana");
     }
 
     //Here we can get the component where we want to show the next name!
