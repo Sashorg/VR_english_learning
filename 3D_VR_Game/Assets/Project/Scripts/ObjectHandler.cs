@@ -19,7 +19,9 @@ public class ObjectHandler : MonoBehaviour
         {
             "chair",
             "glass",
-            "fork"
+            "fork",
+            "table"
+
         };
         passed = 0;
         full = obj.Count;

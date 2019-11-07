@@ -58,9 +58,11 @@ public class InteractiveObject : MonoBehaviour
 
         if (match)
         {
+            ObjectScript.deleteObject(ObjectHandler.objectToShow.ToString());
             _rd.material.color = Color.green;
             Debug.Log("Match!");
             ObjectHandler.SetText();
+          
            //Call function to warn that the right word has been chosen
         }
         else
