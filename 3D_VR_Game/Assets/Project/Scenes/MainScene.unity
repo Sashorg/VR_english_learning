@@ -184,7 +184,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 50765026}
           m_MethodName: gvrOn
           m_Mode: 1
           m_Arguments:
@@ -210,7 +210,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 50765020}
           m_MethodName: gvrOff
           m_Mode: 1
           m_Arguments:
@@ -318,6 +318,10 @@ PrefabInstance:
     - target: {fileID: 171526, guid: 60270cf52a5e94998a5a335989159738, type: 3}
       propertyPath: m_Name
       value: GvrReticlePointer
+      objectReference: {fileID: 0}
+    - target: {fileID: 171526, guid: 60270cf52a5e94998a5a335989159738, type: 3}
+      propertyPath: m_TagString
+      value: Reticle
       objectReference: {fileID: 0}
     - target: {fileID: 482300, guid: 60270cf52a5e94998a5a335989159738, type: 3}
       propertyPath: m_LocalPosition.x
@@ -716,7 +720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 368.82, y: 180.32}
+  m_AnchoredPosition: {x: 312, y: 133}
   m_SizeDelta: {x: 194.55, y: 27.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &790796913
@@ -925,7 +929,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 981700343}
           m_MethodName: gvrOn
           m_Mode: 1
           m_Arguments:
@@ -951,7 +955,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 981700343}
           m_MethodName: gvrOff
           m_Mode: 1
           m_Arguments:
@@ -1653,7 +1657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 315.5, y: 95.1}
+  m_AnchoredPosition: {x: 315.5, y: 60}
   m_SizeDelta: {x: 82, y: 23.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1462122558
@@ -1913,7 +1917,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1581035137}
           m_MethodName: gvrOn
           m_Mode: 1
           m_Arguments:
@@ -1939,7 +1943,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1581035131}
           m_MethodName: gvrOff
           m_Mode: 1
           m_Arguments:
