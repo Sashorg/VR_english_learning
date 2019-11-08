@@ -8,7 +8,7 @@ public class ObjectScript : MonoBehaviour
 {
     public static string tagit;
     private Transform _tr;
-    public GameObject[] allobjects,spawnPoints;
+    public GameObject[] spawnPoints;
     public  GameObject currentPoint;
     public static ArrayList obj2= new ArrayList { };
     int index;
@@ -22,7 +22,7 @@ public class ObjectScript : MonoBehaviour
     }
     void Start()
     {
-        foreach (GameObject go in allobjects)
+        foreach (GameObject go in spawnPoints)
         {
             if (!obj2.Contains(go.name)&&(obj2.Count<len))
             {
