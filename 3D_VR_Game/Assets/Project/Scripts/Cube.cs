@@ -11,10 +11,17 @@ public class Cube : MonoBehaviour
     private bool _gazeComplete;
     public string targetTag;
     public bool match;
+    float start_time;
+    float end_time;
+    private int num_of_mistakes=0;
+    int error_per_word = 0;
+    private ArrayList list_of_mistakes= new ArrayList { };
+    private ArrayList time_of_one_guess = new ArrayList { };
 
     // Start is called before the first frame update
     void Start()
     {
+        start_time = Time.time;
         _gazeComplete = false;
         _gvrStatus = false;
         _gvrTimer = 0;
@@ -57,14 +64,25 @@ public class Cube : MonoBehaviour
         
         if (match)
         {
-           ObjectScript.deleteObject(ObjectHandler.objectToShow);
+            end_time = Time.time - start_time;
+            start_time = Time.time;
+            time_of_one_guess.Add(end_time);
+            ObjectScript.deleteObject(ObjectHandler.objectToShow);
             ObjectHandler.SetText();
-            
+            error_per_word = 0;
+            print("errors=" + error_per_word);
             Debug.Log("Match!");
             //Do something if match object
         }
         else
         {
+            error_per_word++;
+            Debug.Log("errors="+error_per_word.ToString());
+            end_time = Time.time - start_time;
+            start_time = Time.time;
+            time_of_one_guess.Add(end_time);
+            num_of_mistakes++;
+            list_of_mistakes.Add(ObjectHandler.objectToShow);
             Debug.Log("Not a match!");
             //Do something else if doesn't match object
         }

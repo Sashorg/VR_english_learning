@@ -10,6 +10,8 @@ TagManager:
   - glass
   - fork
   - Reticle
+  - closet
+  - guitar
   layers:
   - Default
   - TransparentFX

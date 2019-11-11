@@ -11,11 +11,18 @@ public class InteractiveObject : MonoBehaviour
     public bool match;
     private GameObject _reticle;
     private Renderer _rd;
-    
+    float start_time;
+    float end_time;
+    private int num_of_mistakes = 0;
+    int error_per_word = 0;
+    private ArrayList list_of_mistakes = new ArrayList { };
+    private ArrayList time_of_one_guess = new ArrayList { };
+
 
     // Start is called before the first frame update
     void Start()
     {
+        start_time = Time.time;
         _gazeComplete = false;
         _gvrStatus = false;
         _gvrTimer = 0;
@@ -58,15 +65,28 @@ public class InteractiveObject : MonoBehaviour
 
         if (match)
         {
+
+            end_time = Time.time - start_time;
+            start_time = Time.time;
+            time_of_one_guess.Add(end_time);
             ObjectScript.deleteObject(ObjectHandler.objectToShow.ToString());
             _rd.material.color = Color.green;
             Debug.Log("Match!");
+            error_per_word = 0;
+            Debug.Log("errors=" + error_per_word.ToString());
             ObjectHandler.SetText();
           
            //Call function to warn that the right word has been chosen
         }
         else
         {
+            error_per_word++;
+            Debug.Log("errors=" + error_per_word.ToString());
+            end_time = Time.time - start_time;
+            start_time = Time.time;
+            time_of_one_guess.Add(end_time);
+            num_of_mistakes++;
+            list_of_mistakes.Add(ObjectHandler.objectToShow);
             _rd.material.color = Color.red;
             Debug.Log("Not a Match!");
             //Make recticle pointer red

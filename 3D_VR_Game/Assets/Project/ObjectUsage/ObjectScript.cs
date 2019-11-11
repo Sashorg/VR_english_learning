@@ -10,9 +10,11 @@ public class ObjectScript : MonoBehaviour
     private Transform _tr;
     public GameObject[] spawnPoints;
     public  GameObject currentPoint;
-    public static ArrayList obj2= new ArrayList { };
+    public static ArrayList floor = new ArrayList { };
+    public static ArrayList obj2 = new ArrayList { };
     int index;
-    public static int len=4;
+    public static int len = 4;
+    public static int len2 = 2;
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,14 +24,37 @@ public class ObjectScript : MonoBehaviour
     }
     void Start()
     {
-        foreach (GameObject go in spawnPoints)
+        if (transform.parent.name == "table")
         {
-            if (!obj2.Contains(go.name)&&(obj2.Count<len))
+            foreach (GameObject go in spawnPoints)
             {
-                print("I added an element of " + go.name);
-                obj2.Add(go.name);
-                print(obj2.Count);
+                print(go.name);
+                print(obj2.Count + " count vs len " + len);
+                if (!obj2.Contains(go.name) && (obj2.Count < len))
+                {
+                    print("I added an element of " + go.name);
+                    obj2.Add(go.name);
+                    print(obj2.Count);
+                }
             }
+
+            print("your parent is table");
+        }
+        else if (transform.parent.name == "floor")
+        {
+            foreach (GameObject go in spawnPoints)
+            {
+                print(go.name);
+                print(floor.Count + " count vs len " + len2);
+                if (!floor.Contains(go.name) && (floor.Count < len2))
+                {
+                    print("I added an element of " + go.name);
+                    floor.Add(go.name);
+                    print(floor.Count);
+                }
+            }
+
+            print("your parent is table");
         }
 
 
@@ -37,48 +62,17 @@ public class ObjectScript : MonoBehaviour
         if (obj2.Count == len)
         {
             len--;
+            randomchose(obj2);
             //bool is needed as we do not need to stop , unless we did not inizialize object. this is needed due to randomness
-            bool flag = false;
-            while (flag != true)
-            {   //here we choosing random object from given list
-                index = Random.Range(0, spawnPoints.Length);
-                currentPoint = spawnPoints[index];
 
-                //  print(spawnPoints[i].ToString() + " is for " + spawnPoints[i]);
+            // print("Player word is "+ ExampleObj.tryout);
+        }
+        if (floor.Count == len2)
+        {
+            len2--;
+            randomchose(floor);
+            //bool is needed as we do not need to stop , unless we did not inizialize object. this is needed due to randomness
 
-                for (int j = 0; j < obj2.Count; j++)
-                //for (int j = 0; j < allobjects.Length; j++)
-
-                {//we are going through the arraylist of all items, looking for one which is equal to one we picked randomly
-                    if (currentPoint.name == obj2[j].ToString())
-                    // if (currentPoint.name == allobjects[j].name)
-                    {
-                        var stuff = Instantiate(currentPoint, _tr.position, _tr.rotation * Quaternion.Euler(-90f, 0f, 0f));
-                        stuff.transform.parent = gameObject.transform;//put clone of obkects into the spawner
-                        stuff.SetActive(true);
-                        this.gameObject.tag = currentPoint.name;//change tag 
-                        tagit = gameObject.tag;
-
-                        print("Your tag is " + gameObject.tag);
-                        print("I removed " + obj2[j].ToString());
-                        obj2.Remove(obj2[j].ToString());
-                        print("your legnth is " + obj2.Count);
-                        // randomPick.deleteObj(randomPick.obj[j].ToString());// delete this value from list of scene objects(no duplicate)
-
-                        flag = true;
-                        //  print(tag);
-
-                        return;
-
-                    }
-                    else
-                    {
-                        index = Random.Range(0, spawnPoints.Length);// just for new cycle
-                        currentPoint = spawnPoints[index];
-                    }
-                }
-
-            }
             // print("Player word is "+ ExampleObj.tryout);
         }
 
@@ -98,5 +92,48 @@ public class ObjectScript : MonoBehaviour
        
 
 
+    }
+    public void randomchose(ArrayList arrayList) {
+        bool flag = false;
+        while (flag != true)
+        {   //here we choosing random object from given list
+            index = Random.Range(0, spawnPoints.Length);
+            currentPoint = spawnPoints[index];
+
+            //  print(spawnPoints[i].ToString() + " is for " + spawnPoints[i]);
+
+            for (int j = 0; j < arrayList.Count; j++)
+            //for (int j = 0; j < allobjects.Length; j++)
+
+            {//we are going through the arraylist of all items, looking for one which is equal to one we picked randomly
+                if (currentPoint.name == arrayList[j].ToString())
+                // if (currentPoint.name == allobjects[j].name)
+                {
+                    var stuff = Instantiate(currentPoint, _tr.position, _tr.rotation * Quaternion.Euler(-90f, 0f, 0f));
+                    stuff.transform.parent = gameObject.transform;//put clone of obkects into the spawner
+                    stuff.SetActive(true);
+                    this.gameObject.tag = currentPoint.name;//change tag 
+                    tagit = gameObject.tag;
+
+                    print("Your tag is " + gameObject.tag);
+                    print("I removed " + arrayList[j].ToString());
+                    arrayList.Remove(arrayList[j].ToString());
+                    print("your legnth is " + arrayList.Count);
+                    // randomPick.deleteObj(randomPick.obj[j].ToString());// delete this value from list of scene objects(no duplicate)
+
+                    flag = true;
+                    //  print(tag);
+
+                    return;
+
+                }
+                else
+                {
+                    index = Random.Range(0, spawnPoints.Length);// just for new cycle
+                    currentPoint = spawnPoints[index];
+                }
+            }
+
+        }
     }
 }
