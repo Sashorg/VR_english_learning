@@ -17,6 +17,8 @@ public class InteractiveObject : MonoBehaviour
     int error_per_word = 0;
     private ArrayList list_of_mistakes = new ArrayList { };
     private ArrayList time_of_one_guess = new ArrayList { };
+    public GameObject accept;
+    public GameObject reject;
 
 
     // Start is called before the first frame update
@@ -28,6 +30,8 @@ public class InteractiveObject : MonoBehaviour
         _gvrTimer = 0;
         _reticle = GameObject.FindGameObjectWithTag("Reticle");
         _rd = _reticle.GetComponent<Renderer>();
+        accept.SetActive(false);
+        reject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -54,7 +58,9 @@ public class InteractiveObject : MonoBehaviour
         _gvrStatus = false;
         _gvrTimer = 0;
         _gazeComplete = false;
-        _rd.material.color = Color.black;
+        accept.SetActive(false);
+        reject.SetActive(false);
+        //_rd.material.color = Color.black;
     }
 
     public void gazeCompleted()
@@ -69,12 +75,13 @@ public class InteractiveObject : MonoBehaviour
             end_time = Time.time - start_time;
             start_time = Time.time;
             time_of_one_guess.Add(end_time);
-            ObjectScript.deleteObject(ObjectHandler.objectToShow.ToString());
-            _rd.material.color = Color.green;
+            //ObjectScript.deleteObject(ObjectHandler.objectToShow.ToString());
+            //_rd.material.color = Color.green;
             Debug.Log("Match!");
             error_per_word = 0;
             Debug.Log("errors=" + error_per_word.ToString());
             ObjectHandler.SetText();
+            accept.SetActive(true);
           
            //Call function to warn that the right word has been chosen
         }
@@ -87,9 +94,10 @@ public class InteractiveObject : MonoBehaviour
             time_of_one_guess.Add(end_time);
             num_of_mistakes++;
             list_of_mistakes.Add(ObjectHandler.objectToShow);
-            _rd.material.color = Color.red;
+            //_rd.material.color = Color.red;
             Debug.Log("Not a Match!");
             //Make recticle pointer red
+            reject.SetActive(true);
         }
     }
 }

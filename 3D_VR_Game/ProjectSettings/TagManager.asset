@@ -4,25 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - point
-  - chair
-  - table
-  - glass
-  - fork
   - Reticle
-  - closet
-  - guitar
-  - clock
-  - laptop
-  - pen
-  - lamp
-  - mug
-  - photo
-  - plant
-  - mouse
-  - bin
-  - bed
-  - door
   layers:
   - Default
   - TransparentFX
@@ -32,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - Timer
+  - 
   - 
   - 
   - 
