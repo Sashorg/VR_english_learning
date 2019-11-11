@@ -18,9 +18,21 @@ public class ObjectHandler : MonoBehaviour
         obj = new ArrayList
         {
             "chair",
-            "glass",
-            "fork",
-            "table"
+            "pen",
+            "bed",
+            "bin",
+            "clock",
+            "closet",
+            "door",
+            "guitar",
+            "lamp",
+            "laptop",
+             "mouse",
+            "mug",
+            "photo",
+            "plant"
+            
+
 
         };
         passed = 0;

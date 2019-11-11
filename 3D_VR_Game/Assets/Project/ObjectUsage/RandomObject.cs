@@ -50,6 +50,7 @@ public class RandomObject : MonoBehaviour
                 child = go;
                 
                GameObject lol=  Instantiate(child, this.gameObject.transform.GetChild(index).transform.position, this.gameObject.transform.GetChild(index).transform.rotation);
+            
             if (lol.name == "door(Clone)") {
                 lol.transform.Rotate(-90f,90f,0f);
             }
