@@ -32,7 +32,6 @@ public class ObjectHandler : MonoBehaviour
         // change this to "you need to find a "GameObject"  
         AudioManager.Instance.ObjectSound(objectToShow);
         obj.RemoveAt(numObject);
-
         //U call like this 1)the name of the GamObject where to change, 2)the "name" of a new sprite.
         //SpriteControl.Instance.NewSprite("Blackboard", "banana");
     }
@@ -56,10 +55,13 @@ public class ObjectHandler : MonoBehaviour
             GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
             obj.RemoveAt(numObject);
         }
+
+
     }
 
     public static void End()
     {
 
     }
+
 }

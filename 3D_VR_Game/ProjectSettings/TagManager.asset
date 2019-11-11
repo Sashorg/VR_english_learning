@@ -12,6 +12,9 @@ TagManager:
   - Reticle
   - closet
   - guitar
+  - Canvas
+  - Accept
+  - Reject
   layers:
   - Default
   - TransparentFX
