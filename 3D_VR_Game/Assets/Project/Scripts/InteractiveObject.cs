@@ -65,24 +65,25 @@ public class InteractiveObject : MonoBehaviour
 
     public void gazeCompleted()
     {
+        print("gamneobjectgaze is " + gameObject.transform.GetChild(0).name);
+        print("gamneobject is " + ObjectHandler.objectToShow + "(Clone)");
         Debug.Log("Gaze!");
         AudioManager.Instance.ObjectSound(this.gameObject.tag);
-        match = this.gameObject.CompareTag(ObjectHandler.objectToShow);
-
-        if (match)
+      
+        if (gameObject.transform.GetChild(0).name == ObjectHandler.objectToShow+"(Clone)")
         {
 
             end_time = Time.time - start_time;
             start_time = Time.time;
             time_of_one_guess.Add(end_time);
-            //ObjectScript.deleteObject(ObjectHandler.objectToShow.ToString());
+            ObjectScript.deleteObject(ObjectHandler.objectToShow.ToString());
             //_rd.material.color = Color.green;
             Debug.Log("Match!");
             error_per_word = 0;
             Debug.Log("errors=" + error_per_word.ToString());
             ObjectHandler.SetText();
             accept.SetActive(true);
-          
+           
            //Call function to warn that the right word has been chosen
         }
         else

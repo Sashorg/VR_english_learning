@@ -46,7 +46,7 @@ public class RandomObject : MonoBehaviour
             {
                 child.transform.Rotate(0f, 180f, 0f);
             }
-            child.tag = go.name;
+           // child.tag = go.name;
                 child = go;
                 
                GameObject lol=  Instantiate(child, this.gameObject.transform.GetChild(index).transform.position, this.gameObject.transform.GetChild(index).transform.rotation);
@@ -86,7 +86,7 @@ public class RandomObject : MonoBehaviour
         {
             print(s);
             //    SpriteControl.Instance.NewSprite(s,"banana");
-            GameObject.FindWithTag(s).SetActive(false);
+            GameObject.Find(s+"(Clone)").transform.parent.gameObject.SetActive(false);
 
 
 

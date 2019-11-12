@@ -88,8 +88,8 @@ public class ObjectScript : MonoBehaviour
     {
         print(s);
     //    SpriteControl.Instance.NewSprite(s,"banana");
-       GameObject.FindWithTag(s).SetActive(false);
-       
+     //  GameObject.FindWithTag(s).SetActive(false);
+        GameObject.Find(s + "(Clone)").SetActive(false);
 
 
     }
