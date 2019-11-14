@@ -67,7 +67,7 @@ public class Cube : MonoBehaviour
             end_time = Time.time - start_time;
             start_time = Time.time;
             time_of_one_guess.Add(end_time);
-            ObjectScript.deleteObject(ObjectHandler.objectToShow);
+         //   ObjectScript.deleteObject(ObjectHandler.objectToShow);
             ObjectHandler.SetText();
             error_per_word = 0;
             print("errors=" + error_per_word);

@@ -77,7 +77,7 @@ public class InteractiveObject : MonoBehaviour
             start_time = Time.time;
             time_of_one_guess.Add(end_time);
 
-            ObjectScript.deleteObject(ObjectHandler.objectToShow.ToString());
+         //   ObjectScript.deleteObject(ObjectHandler.objectToShow.ToString());
             //MaterialControl.Instance.NewMaterial(ObjectHandler.objectToShow);
 
             //_rd.material.color = Color.green;
