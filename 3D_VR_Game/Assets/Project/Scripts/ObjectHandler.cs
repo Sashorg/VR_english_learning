@@ -15,26 +15,15 @@ public class ObjectHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        obj = new ArrayList
+        obj = new ArrayList { };
+        RandomObject[] ros = (RandomObject[])FindObjectsOfType(typeof(RandomObject));
+        foreach (RandomObject r in ros)
         {
-            "chair",
-            "pen",
-            "bed",
-            "bin",
-            "clock",
-            "closet",
-            "door",
-            "guitar",
-            "lamp",
-            "laptop",
-             "mouse",
-            "mug",
-            "photo",
-            "plant"
-            
-
-
-        };
+            foreach (GameObject g in r.spawnPoint)
+            {
+                obj.Add(g.name);
+            }
+        }
         passed = 0;
         full = obj.Count;
         numObject = Random.Range(0, obj.Count);
@@ -44,11 +33,8 @@ public class ObjectHandler : MonoBehaviour
         // change this to "you need to find a "GameObject"  
         AudioManager.Instance.ObjectSound(objectToShow);
         obj.RemoveAt(numObject);
-        //U call like this 1)the name of the GamObject where to change, 2)the "name" of a new sprite.
-        //SpriteControl.Instance.NewSprite("Blackboard", "banana");
     }
 
-    //Here we can get the component where we want to show the next name!
     public static void SetText()
     {
         passed++;
@@ -63,6 +49,7 @@ public class ObjectHandler : MonoBehaviour
         {
             numObject = Random.Range(0, obj.Count);
             objectToShow = obj[numObject].ToString();
+            AudioManager.Instance.ObjectSound(objectToShow);
             GameObject.Find("UI_Object").GetComponent<Text>().text = objectToShow;
             GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
             obj.RemoveAt(numObject);
