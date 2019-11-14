@@ -39,10 +39,14 @@ public class RandomObject : MonoBehaviour
                         
                         
                 print(child.ToString());
-            if (child.name == "right") {
+            if (child.tag == "right_wall") {
                 child.transform.Rotate(0f,90f,0f);
             }
-            if (child.name == "down")
+            if (child.tag == "left_wall")
+            {
+                child.transform.Rotate(0f, -90f, 0f);
+            }
+            if (child.tag == "down_wall")
             {
                 child.transform.Rotate(0f, 180f, 0f);
             }
@@ -51,17 +55,8 @@ public class RandomObject : MonoBehaviour
                 
                GameObject lol=  Instantiate(child, this.gameObject.transform.GetChild(index).transform.position, this.gameObject.transform.GetChild(index).transform.rotation);
             
-            if (lol.name == "door(Clone)") {
-                lol.transform.Rotate(-90f,90f,0f);
-            }
-            if (lol.name == "bed(Clone)")
-            {
-                lol.transform.Rotate(-90f, 180f, 0f);
-            }
-            if (lol.name == "closet(Clone)")
-            {
-                lol.transform.Rotate(0f, -90f, 0f);
-            }
+         
+           
 
             lol.transform.parent = this.gameObject.transform.GetChild(index);
                 count++;

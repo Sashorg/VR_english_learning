@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Reticle
+  - left_wall
+  - right_wall
+  - down_wall
   layers:
   - Default
   - TransparentFX
