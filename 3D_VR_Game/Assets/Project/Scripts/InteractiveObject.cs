@@ -76,7 +76,10 @@ public class InteractiveObject : MonoBehaviour
             end_time = Time.time - start_time;
             start_time = Time.time;
             time_of_one_guess.Add(end_time);
+
             ObjectScript.deleteObject(ObjectHandler.objectToShow.ToString());
+            //MaterialControl.Instance.NewMaterial(ObjectHandler.objectToShow);
+
             //_rd.material.color = Color.green;
             Debug.Log("Match!");
             error_per_word = 0;
