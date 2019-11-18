@@ -5,24 +5,24 @@ using UnityEngine;
 public class AudioManager : Singleton<AudioManager>
 {
     public AudioSource SoundEffect;
+    public AudioClip[] clips;
+    //public AudioClip ChairClip;
+    //public AudioClip PenClip;
+    //public AudioClip BedClip;
+    //public AudioClip BinClip;
+    //public AudioClip ClockClip;
+    //public AudioClip ClosetClip;
+    //public AudioClip DoorClip;
+    //public AudioClip GuitarClip;
+    //public AudioClip LampClip;
+    //public AudioClip LaptopClip;
+    //public AudioClip MouseClip;
+    //public AudioClip MugClip;
+    //public AudioClip PhotoClip;
+    //public AudioClip PlantClip;
 
-    public AudioClip ChairClip;
-    public AudioClip PenClip;
-    public AudioClip BedClip;
-    public AudioClip BinClip;
-    public AudioClip ClockClip;
-    public AudioClip ClosetClip;
-    public AudioClip DoorClip;
-    public AudioClip GuitarClip;
-    public AudioClip LampClip;
-    public AudioClip LaptopClip;
-    public AudioClip MouseClip;
-    public AudioClip MugClip;
-    public AudioClip PhotoClip;
-    public AudioClip PlantClip;
-    
 
-    public void ObjectSound(string Object)
+    /* public void ObjectSound(string Object)
     {
         if(Object == "chair" && ChairClip != null)
         {
@@ -94,6 +94,18 @@ public class AudioManager : Singleton<AudioManager>
             SoundEffect.PlayOneShot(PlantClip);
         }
 
+    }
+    */
+
+    public void ObjectSound(string Object) 
+    {
+        for(int i = 0; i < clips.Length; i++)
+        {
+            if(Object == clips[i].name)
+            {
+                SoundEffect.PlayOneShot(clips[i]);
+            }
+        }
     }
 
 }
