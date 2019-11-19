@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 682375568689791624}
-  - component: {fileID: 682375568689791631}
+  - component: {fileID: 5226916648247145483}
   m_Layer: 0
   m_Name: chair
   m_TagString: Untagged
@@ -160,7 +160,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &682375568689791631
+--- !u!114 &5226916648247145483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,12 +169,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 682375568689791630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e17e6d3c6ea8a5b4490ac92d7d064a74, type: 3}
+  m_Script: {fileID: 11500000, guid: c2eb9d00129c9194686c1f5a7e098309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
+  spawnPoint:
   - {fileID: 8179768750800755724, guid: 699e62eef8c67624ca5e1247fd5c9c6d, type: 3}
   - {fileID: 7224187601981516258, guid: 402221d3546668b4a9e04ee41cee316f, type: 3}
   - {fileID: 7195491191498357457, guid: c8dd5688c6dc8d041b2bf37751dfa29f, type: 3}
   - {fileID: 261895314222381250, guid: 2e3f9afb650087445a301246fae78a78, type: 3}
-  currentPoint: {fileID: 0}
+  usedValues: 
+  usedValues2: 
+  count: 0
+  count_go: 0
