@@ -8,6 +8,13 @@ TagManager:
   - left_wall
   - right_wall
   - down_wall
+  - table
+  - fork
+  - glass
+  - chair
+  - Gaze Image
+  - Reject
+  - Accept
   layers:
   - Default
   - TransparentFX

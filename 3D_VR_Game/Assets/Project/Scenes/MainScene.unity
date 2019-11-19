@@ -134,9 +134,8 @@ GameObject:
   - component: {fileID: 50765022}
   - component: {fileID: 50765021}
   - component: {fileID: 50765020}
-  - component: {fileID: 50765026}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Chair
   m_TagString: table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,11 +150,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 50765019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f1f91ea93e5c04b87e06a9f40df996, type: 3}
+  m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgGaze: {fileID: 1511753423}
-  totalTime: 2
+  imgGaze: {fileID: 0}
+  _accept: {fileID: 0}
+  _reject: {fileID: 0}
 --- !u!114 &50765021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,33 +184,11 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 50765026}
-          m_MethodName: gvrOn
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 50765020}
-          m_MethodName: gvrOff
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 50765026}
           m_MethodName: gvrOff
           m_Mode: 1
           m_Arguments:
@@ -294,22 +272,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &50765026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 50765019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75917f1edfa10664e98c48e8b85308bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalTime: 2
-  match: 0
-  accept: {fileID: 1429303998}
-  reject: {fileID: 987757171}
 --- !u!1001 &166887225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1008,9 +970,8 @@ GameObject:
   - component: {fileID: 981700339}
   - component: {fileID: 981700338}
   - component: {fileID: 981700337}
-  - component: {fileID: 981700343}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Bed
   m_TagString: fork
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1025,11 +986,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 981700336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f1f91ea93e5c04b87e06a9f40df996, type: 3}
+  m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgGaze: {fileID: 1511753423}
-  totalTime: 2
+  imgGaze: {fileID: 0}
+  _accept: {fileID: 0}
+  _reject: {fileID: 0}
 --- !u!114 &981700338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1058,33 +1020,11 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 981700343}
-          m_MethodName: gvrOn
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 981700337}
-          m_MethodName: gvrOff
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 981700343}
           m_MethodName: gvrOff
           m_Mode: 1
           m_Arguments:
@@ -1168,28 +1108,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &981700343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981700336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75917f1edfa10664e98c48e8b85308bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalTime: 2
-  match: 0
-  accept: {fileID: 1429303998}
-  reject: {fileID: 987757171}
---- !u!1 &987757171 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4648249781084019315, guid: 37d2d12a06df5e14487dd48810dea075,
-    type: 3}
-  m_PrefabInstance: {fileID: 4648249780971184128}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &999272192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1544,20 +1462,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundEffect: {fileID: 1218271527}
-  ChairClip: {fileID: 8300000, guid: f8c1ddc9501ab6942b2277e61db568ef, type: 3}
-  PenClip: {fileID: 0}
-  BedClip: {fileID: 0}
-  BinClip: {fileID: 0}
-  ClockClip: {fileID: 0}
-  ClosetClip: {fileID: 0}
-  DoorClip: {fileID: 0}
-  GuitarClip: {fileID: 0}
-  LampClip: {fileID: 0}
-  LaptopClip: {fileID: 0}
-  MouseClip: {fileID: 0}
-  MugClip: {fileID: 0}
-  PhotoClip: {fileID: 0}
-  PlantClip: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: 9be6f346b72ae0d4797c12b7898e91e0, type: 3}
+  - {fileID: 8300000, guid: 066f22eb3d7e0c44582131a932fc8cb7, type: 3}
+  - {fileID: 8300000, guid: 5e104506daca123458558e89a48c91f6, type: 3}
 --- !u!4 &1218271529
 Transform:
   m_ObjectHideFlags: 0
@@ -1682,7 +1590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a8fadf4dfbe8f478c4aa1303018bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: {fileID: 21300000, guid: 9653b8626893fa142b5e0f32747a8a33, type: 3}
 --- !u!4 &1316136603
 Transform:
   m_ObjectHideFlags: 0
@@ -1754,24 +1661,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
---- !u!1 &1429303998 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4648249779579671230, guid: 37d2d12a06df5e14487dd48810dea075,
-    type: 3}
-  m_PrefabInstance: {fileID: 4648249780971184128}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1511753423 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4648249779460548303, guid: 37d2d12a06df5e14487dd48810dea075,
-    type: 3}
-  m_PrefabInstance: {fileID: 4648249780971184128}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1536041218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,9 +1755,8 @@ GameObject:
   - component: {fileID: 1581035133}
   - component: {fileID: 1581035132}
   - component: {fileID: 1581035131}
-  - component: {fileID: 1581035137}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Bin
   m_TagString: glass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1883,11 +1771,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1581035130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f1f91ea93e5c04b87e06a9f40df996, type: 3}
+  m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgGaze: {fileID: 1511753423}
-  totalTime: 2
+  imgGaze: {fileID: 0}
+  _accept: {fileID: 0}
+  _reject: {fileID: 0}
 --- !u!114 &1581035132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1916,33 +1805,11 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1581035137}
-          m_MethodName: gvrOn
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1581035131}
-          m_MethodName: gvrOff
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1581035137}
           m_MethodName: gvrOff
           m_Mode: 1
           m_Arguments:
@@ -2026,22 +1893,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1581035137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581035130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75917f1edfa10664e98c48e8b85308bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalTime: 2
-  match: 0
-  accept: {fileID: 1429303998}
-  reject: {fileID: 987757171}
 --- !u!1 &1602020558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,9 +2005,8 @@ GameObject:
   - component: {fileID: 2124965586}
   - component: {fileID: 2124965590}
   - component: {fileID: 2124965585}
-  - component: {fileID: 2124965591}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Bed
   m_TagString: chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2171,11 +2021,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2124965584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f1f91ea93e5c04b87e06a9f40df996, type: 3}
+  m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgGaze: {fileID: 1511753423}
-  totalTime: 2
+  imgGaze: {fileID: 0}
+  _accept: {fileID: 0}
+  _reject: {fileID: 0}
 --- !u!65 &2124965586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2277,17 +2128,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 2124965591}
-          m_MethodName: gvrOn
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -2303,33 +2143,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 2124965591}
-          m_MethodName: gvrOff
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &2124965591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124965584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75917f1edfa10664e98c48e8b85308bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalTime: 2
-  match: 0
-  accept: {fileID: 1429303998}
-  reject: {fileID: 987757171}
 --- !u!1001 &2074302496998935361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2341,6 +2154,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074302498214941289, guid: 7dfe5b8e17189ac4d805c0fb214519d6,
+        type: 3}
+      propertyPath: clips.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2074302498214941288, guid: 7dfe5b8e17189ac4d805c0fb214519d6,
         type: 3}
@@ -2516,15 +2334,40 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4648249780786885573, guid: 37d2d12a06df5e14487dd48810dea075,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1536041221}
     - target: {fileID: 4648249780786885571, guid: 37d2d12a06df5e14487dd48810dea075,
         type: 3}
       propertyPath: gvrReticle
       value: 
       objectReference: {fileID: 1543791944}
+    - target: {fileID: 4648249781084019315, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_TagString
+      value: Reject
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648249781084019315, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648249779579671230, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_TagString
+      value: Accept
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648249779579671230, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648249780786885573, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1536041221}
+    - target: {fileID: 4648249779460548301, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_TagString
+      value: Gaze Image
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37d2d12a06df5e14487dd48810dea075, type: 3}
