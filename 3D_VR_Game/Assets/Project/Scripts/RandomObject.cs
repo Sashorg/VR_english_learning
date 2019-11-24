@@ -85,9 +85,10 @@ public class RandomObject : MonoBehaviour
 
 
         }
+        usedValues.Clear();
+        usedValues2.Clear();
 
 
-        
     }
         // Update is called once per frame
         void Update()

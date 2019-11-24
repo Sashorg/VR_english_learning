@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class levelChanger : MonoBehaviour
 {
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -14,19 +15,17 @@ public class levelChanger : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            GameObject.Find("Furniture").SetActive(true);
-            GameObject.Find("Gadgets").SetActive(false);
-        }
-
        
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-
-            GameObject.Find("Furniture").SetActive(false);
-            GameObject.Find("Gadgets").SetActive(true);
-        }
+    }
+    public void level1() {
+        print("we are iin 1");
+        GameObject.Find("Furniture").gameObject.SetActive(false);
+     
+    }
+    public void level2()
+    {
+        print("we are in 2");
+       
+        GameObject.Find("Gadgets").gameObject.SetActive(false);
     }
 }

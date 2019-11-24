@@ -15,6 +15,7 @@ TagManager:
   - Gaze Image
   - Reject
   - Accept
+  - point
   layers:
   - Default
   - TransparentFX
