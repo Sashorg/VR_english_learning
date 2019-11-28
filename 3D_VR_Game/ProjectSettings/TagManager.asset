@@ -16,6 +16,14 @@ TagManager:
   - Reject
   - Accept
   - point
+  - floor
+  - walls
+  - spawner
+  - spawner_floor
+  - spawner_wall
+  - spawner_table
+  - spawner_middle_wall
+  - middle_walls
   layers:
   - Default
   - TransparentFX

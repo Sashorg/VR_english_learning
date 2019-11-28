@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6551473195231466510}
   - component: {fileID: 1695153473550948641}
   m_Layer: 0
-  m_Name: desk
-  m_TagString: Untagged
+  m_Name: table
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ Transform:
   m_GameObject: {fileID: 6551473195510290210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 14.242, y: 14.242, z: 14.242}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6551473195231466510}
   m_RootOrder: 0

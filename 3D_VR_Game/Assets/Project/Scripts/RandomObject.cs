@@ -27,66 +27,36 @@ public class RandomObject : MonoBehaviour
     }
     void Start()
     {
-       
-        for (count_go=0; count_go < transform.childCount;count_go++)
-        {
-            print("NOOOO"+count_go);
-            goindex = UniqueRandomInt(0, spawnPoint.Length);
-            if (count == transform.childCount)
-                {
-                    print(count);
-                    return;
-                }
-            if (count_go == spawnPoint.Length)
-            {
-                print(goindex);
-                return;
-            }
-            print("num of childer is " + transform.childCount);
+        spawnPoint = reshuffle_go(spawnPoint);
+       //shuffle list , instanciate prefab from code
 
-               index = UniqueRandomInt2(0, transform.childCount);
-                  print("index is " + index);
-                   child = transform.GetChild(index).gameObject;
+               
+                   child = transform.Find("chairs").gameObject;
                    print(child.name);
 
 
 
                    print(child.ToString());
-                   if (child.tag == "right_wall")
-                   {
-                       child.transform.Rotate(0f, 90f, 0f);
-                   }
-                   if (child.tag == "left_wall")
-                   {
-                       child.transform.Rotate(0f, -90f, 0f);
-                   }
-                   if (child.tag == "down_wall")
-                   {
-                       child.transform.Rotate(0f, 180f, 0f);
-                   }
+                  
                    // child.tag = go.name;
-                   child = spawnPoint[goindex];
+                   child = spawnPoint[0];
 
                    GameObject lol = Instantiate(child, this.gameObject.transform.GetChild(index).transform.position, this.gameObject.transform.GetChild(index).transform.rotation);
-
+        lol.transform.parent = gameObject.transform;
 
 
 
                    lol.transform.parent = this.gameObject.transform.GetChild(index);
               
-            count++;
+            
                
-                print(child.ToString());
-                print(count);
-            print(count_go);
-            print(spawnPoint.Length);
+           
 
 
 
 
-        }
-        usedValues.Clear();
-        usedValues2.Clear();
+     
+
 
 
     }
@@ -96,42 +66,20 @@ public class RandomObject : MonoBehaviour
 
 
         }
-        public static void deleteObjects(string s)
-        {
-            print(s);
-            //    SpriteControl.Instance.NewSprite(s,"banana");
-            GameObject.Find(s+"(Clone)").transform.parent.gameObject.SetActive(false);
-
-
-
-        }
-    public int UniqueRandomInt(int min, int max)
+      
+   
+   
+    GameObject[] reshuffle_go(GameObject[] texts)
     {
-        int val = Random.Range(min, max);
-        while (usedValues.Contains(val))
+        // Knuth shuffle algorithm :: courtesy of Wikipedia :)
+        for (int t = 0; t < texts.Length; t++)
         {
-            val = Random.Range(min, max);
+            GameObject tmp = texts[t];
+            int r = Random.Range(t, texts.Length);
+            texts[t] = texts[r];
+            texts[r] = tmp;
         }
-       
-        usedValues.Add(val);
-        print("List is "+usedValues.Count);
-            print(val);
-        return val;
-        
-    }
-    public int UniqueRandomInt2(int min, int max)
-    {
-        int val = Random.Range(min, max);
-        while (usedValues2.Contains(val))
-        {
-            val = Random.Range(min, max);
-        }
-
-        usedValues2.Add(val);
-        print("List2 is " + usedValues2.Count);
-        print(val);
-        return val;
-
+        return texts;
     }
 
 }

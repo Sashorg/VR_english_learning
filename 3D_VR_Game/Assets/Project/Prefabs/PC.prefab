@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4473113732179266466}
   m_Layer: 0
   m_Name: PC
-  m_TagString: Untagged
+  m_TagString: table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
       propertyPath: m_LocalRotation.z
@@ -68,7 +68,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
       propertyPath: m_RootOrder
@@ -80,7 +80,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

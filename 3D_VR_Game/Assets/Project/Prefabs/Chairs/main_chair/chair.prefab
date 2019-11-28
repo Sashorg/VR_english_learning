@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 682375568136515922}
   - component: {fileID: 682375568136515933}
-  - component: {fileID: 682375568136515932}
-  - component: {fileID: 682375568136515923}
+  - component: {fileID: 5924832433548007000}
   m_Layer: 0
   m_Name: chairs
   m_TagString: Untagged
@@ -27,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682375568136515921}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.31, y: 0.28, z: 0.73}
-  m_LocalScale: {x: 14.242, y: 14.242, z: 14.242}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 682375568689791624}
   m_RootOrder: 0
@@ -50,7 +49,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 682375568136515923}
+        - m_Target: {fileID: 0}
           m_MethodName: gvrOn
           m_Mode: 1
           m_Arguments:
@@ -61,7 +60,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 682375568136515932}
+        - m_Target: {fileID: 0}
           m_MethodName: gvrOn
           m_Mode: 1
           m_Arguments:
@@ -76,7 +75,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 682375568136515923}
+        - m_Target: {fileID: 0}
           m_MethodName: gvrOff
           m_Mode: 1
           m_Arguments:
@@ -87,7 +86,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 682375568136515932}
+        - m_Target: {fileID: 0}
           m_MethodName: gvrOff
           m_Mode: 1
           m_Arguments:
@@ -98,7 +97,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &682375568136515932
+--- !u!114 &5924832433548007000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,27 +106,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 682375568136515921}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75917f1edfa10664e98c48e8b85308bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalTime: 2
-  match: 0
-  accept: {fileID: 0}
-  reject: {fileID: 0}
---- !u!114 &682375568136515923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682375568136515921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f1f91ea93e5c04b87e06a9f40df996, type: 3}
+  m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   imgGaze: {fileID: 0}
-  totalTime: 2
+  _accept: {fileID: 0}
+  _reject: {fileID: 0}
 --- !u!1 &682375568689791630
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +124,7 @@ GameObject:
   - component: {fileID: 5226916648247145483}
   m_Layer: 0
   m_Name: chair
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682375568689791630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7451825, y: 0.18, z: 0.13}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 682375568136515922}
