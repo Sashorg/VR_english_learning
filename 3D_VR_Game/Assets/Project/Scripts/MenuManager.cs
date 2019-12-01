@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
 {
     private bool _enabled = false;
     private GameObject _initialMenu;
+    private GameObject _gameTypeSelectionMenu;
     private GameObject _roomSelectionMenu;
     private GameObject _gameModeSelectionMenu;
     private GameObject _difficultySelectionMenu;
@@ -16,11 +17,13 @@ public class MenuManager : MonoBehaviour
     void Awake()
     {
         _initialMenu = GameObject.Find("Initial Menu");
+        _gameTypeSelectionMenu = GameObject.Find("Game Type Selection Menu");
         _roomSelectionMenu = GameObject.Find("Room Selection Menu");
         _gameModeSelectionMenu = GameObject.Find("Game Mode Selection Menu");
         _difficultySelectionMenu = GameObject.Find("Difficulty Selection Menu");
         _startMenu = GameObject.Find("Start Menu");
         _initialMenu.SetActive(true);
+        _gameTypeSelectionMenu.SetActive(false);
         _roomSelectionMenu.SetActive(false);
         _gameModeSelectionMenu.SetActive(false);
         _difficultySelectionMenu.SetActive(false);
@@ -33,7 +36,7 @@ public class MenuManager : MonoBehaviour
     public void handleClickPlay()
     {
         _initialMenu.SetActive(false);
-        _roomSelectionMenu.SetActive(true);
+        _gameTypeSelectionMenu.SetActive(true);
     }
 
     public void handleClickOptions()
@@ -44,6 +47,28 @@ public class MenuManager : MonoBehaviour
     public void handleClickExit()
     {
         Application.Quit();
+    }
+
+    //Game Type Selection Menu
+    public void handleClickVocabulary()
+    {
+        SettingsManager.gameType = "Vocabulary";
+        _gameTypeSelectionMenu.SetActive(false);
+        _roomSelectionMenu.SetActive(true);
+    }
+
+    public void handleClickPhonetic()
+    {
+
+        SettingsManager.gameType = "Phonetic";
+        _gameTypeSelectionMenu.SetActive(false);
+        _difficultySelectionMenu.SetActive(true);
+    }
+
+    public void handleClickBackGameTypeSelection()
+    {
+        _gameTypeSelectionMenu.SetActive(false);
+        _startMenu.SetActive(true);
     }
 
     //Room Selection Menu
@@ -72,7 +97,7 @@ public class MenuManager : MonoBehaviour
     public void handleClickBackRoomSelection()
     {
         _roomSelectionMenu.SetActive(false);
-        _initialMenu.SetActive(true);
+        _gameTypeSelectionMenu.SetActive(true);
     }
 
     //Game Mode Selection Menu
@@ -122,8 +147,16 @@ public class MenuManager : MonoBehaviour
 
     public void handleClickBackDifficultySelection()
     {
-        _difficultySelectionMenu.SetActive(false);
-        _gameModeSelectionMenu.SetActive(true);
+        if (SettingsManager.gameType == "Vocabulary")
+        {
+            _difficultySelectionMenu.SetActive(false);
+            _gameModeSelectionMenu.SetActive(true);
+        }
+        else if (SettingsManager.gameType == "Phonetic")
+        {
+            _difficultySelectionMenu.SetActive(false);
+            _gameTypeSelectionMenu.SetActive(true);
+        }
     }
 
     //Start Menu

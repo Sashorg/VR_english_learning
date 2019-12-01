@@ -4,7 +4,8 @@ using UnityEngine;
 
 public static class SettingsManager 
 {
-    public static string room;
-    public static string gameMode;
-    public static string difficulty;
+    public static string gameType = "";
+    public static string room = "";
+    public static string gameMode = "";
+    public static string difficulty = "";
 }
