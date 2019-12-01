@@ -162,13 +162,16 @@ public class MenuManager : MonoBehaviour
     //Start Menu
     public void handleClickStartGame()
     {
-        //if (SettingsManager.room == "Bedroom")
-        //    SceneManager.LoadScene(1);
+        if (SettingsManager.room == "Bedroom")
+           SceneManager.LoadScene(2);
+        if (SettingsManager.gameType == "Phonetic")
+            SceneManager.LoadScene(3);
+
         //else if (SettingsManager.room == "Kitchen")
         //    SceneManager.LoadScene(2);
         //else if (SettingsManager.room == "Zoo")
         //    SceneManager.LoadScene(3);
-        SceneManager.LoadScene(1);
+       // SceneManager.LoadScene(2);
         Debug.Log(SettingsManager.room);
         Debug.Log(SettingsManager.gameMode);
         Debug.Log(SettingsManager.difficulty);

@@ -3,317 +3,209 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.IO;
 public class RandomObject_phonetcs : MonoBehaviour
 {
-    private Transform _tr;
-    public GameObject[] spawnPoint;
-    int index;
-    int goindex;
-    public static ArrayList floor = new ArrayList { };
-    private GameObject child;
-    public List<int> usedValues = new List<int>();
-    public List<int> usedValues2 = new List<int>();
-    public ArrayList objects = new ArrayList { };
-    public int count=0;
-    public int count_go ;
-    public int spw_counter;
-    string test;
-    string delete_name;
+
+
+    public delegate void ChangeRoad();
+    public static event ChangeRoad changeRoadEvent;
+
+    private GameObject spawner_stand;
+    private GameObject table;
+    private GameObject reservedGO;
+    private GameObject top_wall;
+    private GameObject back_wall;
+    private GameObject goo;
+    string path;
+    string jsonString;
+    public static string score;
+    private int index = 3;//# of spawners in the scene
+    public static int rnd_number;
+    private int count_walls = 0;
+
+    private ArrayList fixed_json_set;
+    private ArrayList objectset;
+    private string level = SettingsManager.difficulty;
+    private string[] objlist;
+    private int i = 0;
+    // Array list is for initiating all objects, the arraylst should be equal to the number of objects attached to spawner
+
+    // Start is called before the first frame update
     void Awake()
     {
 
-        //just to turn chair as they are 90 degrees not correct. we(designer) should fix this problem and we can delete it
-        _tr = GetComponent<Transform>();
+    }
+    private void OnEnable()
+    {
+        Deligate.goodChoice += good;
+        Deligate.badChoice += bad;
+    }
+
+    private void OnDisable()
+    {
+        Deligate.goodChoice -= good;
+        Deligate.badChoice -= bad;
     }
     void Start()
     {
-        for (spw_counter = 0; spw_counter < spawnPoint.Length; spw_counter++) {
-            objects.Add(spawnPoint[spw_counter].name);
-           
-        }
-        for (count_go=0; count_go < transform.childCount;count_go++)
-        {
-            
-            goindex = UniqueRandomInt(0, objects.Count);
-            if (count == transform.childCount)
-                {
-                usedValues.Clear();
-                usedValues2.Clear();
-                return;
-                }
-            if (count_go == objects.Count)
-            {
-                usedValues.Clear();
-                usedValues2.Clear();
-                return;
-            }
-         
 
-               index = UniqueRandomInt2(0, transform.childCount);
-                
-                   child = transform.GetChild(index).gameObject;
-                  
-
-
-
-
-            // child.tag = go.name;
-                   test = objects[goindex].ToString();
-            foreach (GameObject g in spawnPoint)
-            {
-                if (g.name == test)
-                {
-                    print(g.name);
-                    print(test);
-                    child = g;
-                }
-                else {
-                    print(g.name);
-                    print(test);
-                }
-            }
-           
-                   
-                   GameObject lol = Instantiate(child, this.gameObject.transform.GetChild(index).transform.position, this.gameObject.transform.GetChild(index).transform.rotation);
-
-
-
-
-                   lol.transform.parent = this.gameObject.transform.GetChild(index);
-              
-            count++;
-               
-                print(child.ToString());
-                print(count);
-            print(count_go);
-            print(spawnPoint.Length);
-
-
-
-
-        }
-        usedValues.Clear();
-        usedValues2.Clear();
-        count = 0;
-
-
+        fixed_json_set = new ArrayList();
+      
+        spawner_stand = GameObject.FindGameObjectWithTag("spawner_stand");
         
-    }
-        // Update is called once per frame
-        void Update()
-        {
+      
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        path = Application.streamingAssetsPath + "/phonetics.json";
+        jsonString = File.ReadAllText(path);
+        Objectss easyy = JsonUtility.FromJson<Objectss>(jsonString);
+        if (level == "Easy")
         {
-            bad();
+            objlist = easyy.level_easy;
         }
-        if (Input.GetKeyDown(KeyCode.B))
+        else if (level == "Medium")
         {
-            good();
+            objlist = easyy.level_medium;
         }
-    }
-        public static void deleteObjects(string s)
+        else
         {
-            print(s);
-            //    SpriteControl.Instance.NewSprite(s,"banana");
-            GameObject.Find(s+"(Clone)").transform.parent.gameObject.SetActive(false);
+            objlist = easyy.level_hard;
+        }
+      
+        objectset = new ArrayList(objlist);
+        objectset = reshuffle(objectset);
+        int words_in_json = objectset.Count;
+        // int places_on_scene = spawner.Length;
+        print(words_in_json);
+
+        //  if (words_in_json > places_on_scene)
+        //  {
+        //      for (int i = 0; i != places_on_scene; i++) {
+        //        fixed_json_set.Add(easyy.level_objects[i]);
+        //      }
+        //      for (int i = places_on_scene; i != words_in_json; i++)
+        //      {
+        //          print(easyy.level_objects[i] +"was deleted");
+        //     }
+        //  }
+        //   print(fixed_json_set.Count);
 
 
 
-        }
-    public int UniqueRandomInt(int min, int max)
-    {
-        int val = Random.Range(min, max);
-        while (usedValues.Contains(val))
-        {
-            val = Random.Range(min, max);
-        }
+
+        //problem is that i intanciat objects and their postions and the change them, but collider see old position
+
+        print(objectset[i]);
+
+       print(objectset[i].ToString());
+
+       GameObject goo= ObjectPoolingManager.Instance.GetObject(objectset[i].ToString());
+
        
-        usedValues.Add(val);
-        print("List is "+usedValues.Count);
-            print(val);
-        return val;
+                        print("we here2");
+                        goo.transform.position = spawner_stand.gameObject.transform.position;
+                        goo.transform.rotation = spawner_stand.gameObject.transform.rotation;
+                        print(goo.transform.position);
+                        
+                   
+
+                
+
+            
+
+                print(goo.tag);
+                // goo.transform.position  
+            
         
+
+
+
+
+
     }
-    public int UniqueRandomInt2(int min, int max)
+
+    // Update is called once per frame
+    void Update()
     {
-        int val = Random.Range(min, max);
-        while (usedValues2.Contains(val))
-        {
-            val = Random.Range(min, max);
-        }
+       
+        // print(Physics.OverlapSphere(new Vector3(0, 1, 0), 3).Length + "last");
+        //if (Physics.OverlapSphere(new Vector3(0, 1, 0), 3).Length > 0) {
+        //  print(Physics.OverlapSphere(new Vector3(0, 1, 0), 3)[0]);
 
-        usedValues2.Add(val);
-        print("List2 is " + usedValues2.Count);
-        print(val);
-        return val;
-
+        //}
     }
-
+   
+    ArrayList reshuffle(ArrayList alpha)
+    {
+        // Knuth shuffle algorithm :: courtesy of Wikipedia :)
+        for (int i = 0; i < alpha.Count; i++)
+        {
+            string temp = alpha[i].ToString();
+            int randomIndex = Random.Range(i, alpha.Count);
+            alpha[i] = alpha[randomIndex];
+            alpha[randomIndex] = temp;
+        }
+        return alpha;
+    }
     public void good() {
-        delete_name = GameObject.FindGameObjectWithTag("point").name;
-        delete_name = delete_name.Replace("(Clone)","");
-        objects.Remove(delete_name);
-        print(objects.Count);
-        Destroy(GameObject.FindGameObjectWithTag("point"));
-        if (objects.Count != 0)
-        {
-            for (count_go = 0; count_go < transform.childCount; count_go++)
-            {
-                print("child " + transform.childCount);
-                goindex = UniqueRandomInt(0, objects.Count);
-                if (count == transform.childCount)
-                {
-                    print("wow");
-                    usedValues.Clear();
-                    usedValues2.Clear();
-                    return;
-                }
-                if (count_go == objects.Count)
-                {
-                    print("wow2");
-                    usedValues.Clear();
-                    usedValues2.Clear();
-                    return;
-                }
-
-
-                index = UniqueRandomInt2(0, transform.childCount);
-
-                child = transform.GetChild(index).gameObject;
-
-
-
-
-
-                // child.tag = go.name;
-                test = objects[goindex].ToString();
-                foreach (GameObject g in spawnPoint)
-                {
-                    if (g.name == test)
-                    {
-                        print(g.name);
-                        print(test);
-                        child = g;
-                    }
-                    else
-                    {
-                        print(g.name);
-                        print(test);
-                    }
-                }
-
-
-                GameObject lol = Instantiate(child, this.gameObject.transform.GetChild(index).transform.position, this.gameObject.transform.GetChild(index).transform.rotation);
-
-
-
-
-                lol.transform.parent = this.gameObject.transform.GetChild(index);
-
-                count++;
-
-                print(child.ToString());
-                print(count);
-                print(count_go);
-                print(spawnPoint.Length);
-
-
-
-
-            }
+        GameObject go = GameObject.FindGameObjectWithTag("now");
+        print(go.name);
+        go.SetActive(false);
+        objectset.RemoveAt(i);
+        if (objectset.Count == 0) {
+            print("Contrats");
+            return;
         }
-        else { print("Congrats, you finished"); }
-        usedValues.Clear();
-        usedValues2.Clear();
-        count = 0;
+ 
+      
+        print(objectset[i].ToString());
+        GameObject goo = ObjectPoolingManager.Instance.GetObject(objectset[i].ToString());
 
 
+        print("we here2");
+        goo.transform.position = spawner_stand.gameObject.transform.position;
+        goo.transform.rotation = spawner_stand.gameObject.transform.rotation;
+        print(goo.transform.position);
 
+        if (changeRoadEvent != null)
+            changeRoadEvent();
 
     }
-    public void bad() {
-        delete_name = GameObject.FindGameObjectWithTag("point").name;
-        print("OOOOOOOOO"+delete_name);
-        delete_name=  delete_name.Replace("(Clone)", "");
-        print("OOOOOOOOO" + delete_name);
-        print(objects[1].ToString());
-        print(objects[0].ToString());
-        objects.Remove(delete_name);
-        Destroy(GameObject.FindGameObjectWithTag("point"));
-        for (count_go = 0; count_go < transform.childCount; count_go++)
-        {
-            print("child "+transform.childCount);
-            goindex = UniqueRandomInt(0, objects.Count);
-            if (count == transform.childCount)
-            {
-                print("wow");
-                usedValues.Clear();
-                usedValues2.Clear();
-                return;
-            }
-            if (count_go == objects.Count)
-            {
-                print("wow2");
-                usedValues.Clear();
-                usedValues2.Clear();
-                return;
-            }
+
+    public void bad()
+    {
+        GameObject go = GameObject.FindGameObjectWithTag("now");
+        go.SetActive(false);
+        object reserve = objectset[i];
+        objectset.RemoveAt(i);
+        int rand = Random.Range(1,objectset.Count-1);
+        print(objectset.Count - 1);
+        objectset.Insert(rand,reserve);
+        GameObject goo = ObjectPoolingManager.Instance.GetObject(objectset[i].ToString());
 
 
-            index = UniqueRandomInt2(0, transform.childCount);
+        print("we here2");
+        goo.transform.position = spawner_stand.gameObject.transform.position;
+        goo.transform.rotation = spawner_stand.gameObject.transform.rotation;
+        print(goo.transform.position);
 
-            child = transform.GetChild(index).gameObject;
-
-
-
-
-
-            // child.tag = go.name;
-            test = objects[goindex].ToString();
-            foreach (GameObject g in spawnPoint)
-            {
-                if (g.name == test)
-                {
-                    print(g.name);
-                    print(test);
-                    child = g;
-                }
-                else
-                {
-                    print(g.name);
-                    print(test);
-                }
-            }
-
-
-            GameObject lol = Instantiate(child, this.gameObject.transform.GetChild(index).transform.position, this.gameObject.transform.GetChild(index).transform.rotation);
-
-
-
-
-            lol.transform.parent = this.gameObject.transform.GetChild(index);
-
-            count++;
-
-            print(child.ToString());
-            print(count);
-            print(count_go);
-            print(spawnPoint.Length);
-
-
-
-
-        }
-        objects.Add(delete_name);
-        usedValues.Clear();
-        usedValues2.Clear();
-        count = 0;
-
-
+        if (changeRoadEvent != null)
+            changeRoadEvent();
 
     }
+    //this function is responsiblle for extracting items from list to have no duplicates in the scene
+
+}
+[System.Serializable]
+public class Objecto
+{
+    // Start is called before the first frame update
+
+    public string[] level_easy;
+
+    public string[] level_medium;
+
+    public string[] level_hard;
 
 }
 

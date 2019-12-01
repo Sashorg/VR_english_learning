@@ -30,9 +30,10 @@ public class JSONeasy : MonoBehaviour
     private int count_table = 0;
     private int amount_tables = 0;
     private ArrayList fixed_json_set;
+    private string level = SettingsManager.difficulty;
+    private string[] objlist;
     // Array list is for initiating all objects, the arraylst should be equal to the number of objects attached to spawner
-    public static ArrayList obj = new ArrayList { "chair", "fork", "glass", "table" };
-
+  
     // Start is called before the first frame update
     void Awake()
     {
@@ -40,6 +41,7 @@ public class JSONeasy : MonoBehaviour
     }
     void Start()
     {
+
         fixed_json_set = new ArrayList();
         spawner_floor = GameObject.FindGameObjectsWithTag("spawner_floor");
         spawner_walls = GameObject.FindGameObjectsWithTag("spawner_wall");
@@ -51,11 +53,22 @@ public class JSONeasy : MonoBehaviour
         path = Application.streamingAssetsPath + "/objects.json";
         jsonString = File.ReadAllText(path);
         Objectss easyy = JsonUtility.FromJson<Objectss>(jsonString);
-        easyy.level_objects = reshuffle(easyy.level_objects);
-        int words_in_json = easyy.level_objects.Length;
+        if (level == "Easy")
+        {
+            objlist = easyy.level_easy;
+        }
+        else if (level == "Medium")
+        {
+            objlist = easyy.level_medium;
+        }
+        else {
+            objlist = easyy.level_hard;
+        }
+        objlist = reshuffle(objlist);
+        int words_in_json = objlist.Length;
        // int places_on_scene = spawner.Length;
         print(words_in_json);
-        print(easyy.level_objects[1]);
+        print(objlist[1]);
 
         //  if (words_in_json > places_on_scene)
         //  {
@@ -69,7 +82,8 @@ public class JSONeasy : MonoBehaviour
         //  }
         //   print(fixed_json_set.Count);
 
-        foreach (string goe in easyy.level_objects) {
+
+        foreach (string goe in objlist) {
             if (goe == "table") {
                 goo = ObjectPoolingManager.Instance.GetObject(goe);
 
@@ -100,7 +114,7 @@ public class JSONeasy : MonoBehaviour
             }
         
         }
-        foreach (string goe in easyy.level_objects)
+        foreach (string goe in objlist)
         {
             if (goe != "table") { 
 
@@ -292,7 +306,11 @@ public class JSONeasy : MonoBehaviour
 public class Objectss
 {
     // Start is called before the first frame update
-    public string level;
-    public string[] level_objects;
+    
+    public string[] level_easy;
+
+    public string[] level_medium;
+
+    public string[] level_hard;
 
 }

@@ -31,7 +31,7 @@ public class RandomObject : MonoBehaviour
        //shuffle list , instanciate prefab from code
 
                
-                   child = transform.Find("chairs").gameObject;
+                   child = transform.Find("child").gameObject;
                    print(child.name);
 
 

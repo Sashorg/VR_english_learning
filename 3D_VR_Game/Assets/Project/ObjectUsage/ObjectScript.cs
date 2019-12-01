@@ -8,9 +8,8 @@ public class ObjectScript : MonoBehaviour
 {
     public static string tagit;
     private Transform _tr;
-    public GameObject[] spawnPoints;
-    public  GameObject currentPoint;
-  
+
+    private int count = 0;
     public static ArrayList obj2 = new ArrayList { };
     int index;
     public static int len = 4;
@@ -22,70 +21,67 @@ public class ObjectScript : MonoBehaviour
         //just to turn chair as they are 90 degrees not correct. we(designer) should fix this problem and we can delete it
         _tr = GetComponent<Transform>();
     }
+    private void OnEnable()
+    {
+        RandomObject_phonetcs.changeRoadEvent += call;
+    }
+
+    private void OnDisable()
+    {
+        RandomObject_phonetcs.changeRoadEvent -= call ;
+
+    }
     void Start()
     {
-      
-            foreach (GameObject go in spawnPoints)
-            {
-                print(go.name);
-                print(obj2.Count + " count vs len " + len);
-                if (!obj2.Contains(go.name) && (obj2.Count < len))
-                {
-                    print("I added an element of " + go.name);
-                    obj2.Add(go.name);
-                    print(obj2.Count);
-                }
-            }
+        int i;
+        i = Random.Range(0,2);
+        print(i);
+        print(gameObject.transform.GetChild(1).name);
+        print(gameObject.transform.GetChild(0).name);
+        if (i == 0) {
+            Vector3 v2 = gameObject.transform.GetChild(1).transform.position;
+            gameObject.transform.GetChild(1).transform.position = gameObject.transform.GetChild(0).transform.position;
+            Vector3 v1 = gameObject.transform.GetChild(0).transform.position;
+            gameObject.transform.GetChild(0).transform.position = v2;
 
-            print("your parent is table");
-        
-    
-
-
-        bool flag = false;
-        while (flag != true)
-        {   //here we choosing random object from given list
-            index = Random.Range(0, spawnPoints.Length);
-            currentPoint = spawnPoints[index];
-
-            //  print(spawnPoints[i].ToString() + " is for " + spawnPoints[i]);
-
-            for (int j = 0; j < obj2.Count; j++)
-            //for (int j = 0; j < allobjects.Length; j++)
-
-            {//we are going through the arraylist of all items, looking for one which is equal to one we picked randomly
-                if (currentPoint.name == obj2[j].ToString())
-                // if (currentPoint.name == allobjects[j].name)
-                {
-                    var stuff = Instantiate(currentPoint, _tr.position, _tr.rotation );
-                    stuff.transform.parent = gameObject.transform;//put clone of obkects into the spawner
-                    stuff.SetActive(true);
-
-                    obj2.Remove(obj2[j].ToString());
-
-                    flag = true;
-
-                    return;
-
-                }
-                else
-                {
-                    index = Random.Range(0, spawnPoints.Length);// just for new cycle
-                    currentPoint = spawnPoints[index];
-                }
-            }
 
         }
-
-
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
        
+
+    }
+    GameObject[] reshuffle_go(GameObject[] texts)
+    {
+        // Knuth shuffle algorithm :: courtesy of Wikipedia :)
+        for (int t = 0; t < texts.Length; t++)
+        {
+            GameObject tmp = texts[t];
+            int r = Random.Range(t, texts.Length);
+            texts[t] = texts[r];
+            texts[r] = tmp;
+        }
+        return texts;
+    }
+  public  void call() {
+
+        int i;
+        i = Random.Range(0, 2);
+        print(i);
+        print(gameObject.transform.GetChild(1).name);
+        print(gameObject.transform.GetChild(0).name);
+        if (i == 0)
+        {
+            Vector3 v2 = gameObject.transform.GetChild(1).transform.position;
+            gameObject.transform.GetChild(1).transform.position = gameObject.transform.GetChild(0).transform.position;
+            Vector3 v1 = gameObject.transform.GetChild(0).transform.position;
+            gameObject.transform.GetChild(0).transform.position = v2;
+
+
+        }
 
     }
 

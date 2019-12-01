@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     public GameObject phone;
     public GameObject photo;
     public GameObject plant;
+    public GameObject lamp_laptop;
+    public GameObject phone_photo;
+
     public GameObject VRglasses;
     // Start is called before the first frame update
     void Awake()
@@ -55,6 +58,10 @@ public class GameManager : MonoBehaviour
         ObjectPoolingManager.Instance.CreatePool(photo, 3, 4);
         ObjectPoolingManager.Instance.CreatePool(plant, 3, 4);
         ObjectPoolingManager.Instance.CreatePool(VRglasses, 3, 4);
+
+
+        ObjectPoolingManager.Instance.CreatePool(lamp_laptop, 1, 2);
+        ObjectPoolingManager.Instance.CreatePool(phone_photo, 1, 2);
         canvas = GameObject.Find("Canvas (1)");
      
         XRSettings.LoadDeviceByName("");

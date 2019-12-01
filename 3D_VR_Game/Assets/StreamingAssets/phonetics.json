@@ -1,0 +1,9 @@
+{
+"level_easy" : ["chair"],
+
+"level_medium" : ["chair","chair"],
+
+"level_hard" : ["phone_photo","lamp_laptop"]
+
+
+}

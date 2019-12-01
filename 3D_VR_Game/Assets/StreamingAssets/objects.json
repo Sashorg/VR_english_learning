@@ -1,5 +1,11 @@
 {
-"level" : "Easy",
-"level_objects" : ["chair","chair","clock","mouse","fan","bed","PC","mug","photo","lamp","closet"]
+
+"level_easy" : ["chair","chair","clock","mouse","fan","bed","PC","mug","photo","lamp","closet"],
+
+"level_medium" : ["chair","chair"],
+
+"level_hard" : ["mouse","fan","bed","PC","mug","photo","lamp","closet"]
+
+
 
 }

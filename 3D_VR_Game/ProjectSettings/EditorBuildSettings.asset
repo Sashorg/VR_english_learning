@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/Main Menu Scene Test.unity
     guid: 24340057fb8b37e4ab2e0ea79a8a0867
+  - enabled: 1
+    path: Assets/Project/Scenes/jsonTryout/MainSceneAlex 1.unity
+    guid: 34a0db75cdfdf4d45bc125e0af075ebb
+  - enabled: 1
+    path: Assets/Project/Scenes/phonetics.unity
+    guid: 8a6c82db199b14844aa39195f3d2ba8a
   m_configObjects: {}

@@ -24,6 +24,8 @@ TagManager:
   - spawner_table
   - spawner_middle_wall
   - middle_walls
+  - spawner_stand
+  - now
   layers:
   - Default
   - TransparentFX
