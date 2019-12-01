@@ -29,6 +29,7 @@ public class MenuManager : MonoBehaviour
         XRSettings.enabled = false;
     }
 
+    //Initial Menu
     public void handleClickPlay()
     {
         _initialMenu.SetActive(false);
@@ -45,41 +46,121 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
+    //Room Selection Menu
+
     public void handleClickBedroom()
     {
-        SceneManager.LoadScene(1);
-        SceneManager.LoadScene(1, )
+        SettingsManager.room = "Bedroom";
+        _roomSelectionMenu.SetActive(false);
+        _gameModeSelectionMenu.SetActive(true);
     }
 
     public void handleClickKitchen()
     {
-
+        SettingsManager.room = "Kitchen";
+        _roomSelectionMenu.SetActive(false);
+        _gameModeSelectionMenu.SetActive(true);
     }
 
     public void handleClickZoo()
     {
-
-    }
-
-    public void handleClickBack()
-    {
-        _initialMenu.SetActive(true);
+        SettingsManager.room = "Zoo";
         _roomSelectionMenu.SetActive(false);
+        _gameModeSelectionMenu.SetActive(true);
     }
-    public void EnableVR()
+
+    public void handleClickBackRoomSelection()
     {
-        XRSettings.LoadDeviceByName("Cardboard");
-        _enabled = true;
+        _roomSelectionMenu.SetActive(false);
+        _initialMenu.SetActive(true);
     }
 
+    //Game Mode Selection Menu
 
-
-    public void Update()
+    public void handleClickLearning()
     {
-        if (_enabled)
-        {
-            XRSettings.enabled = true;
-            _enabled = false;
-        }
+        SettingsManager.gameMode = "Learning";
+        _gameModeSelectionMenu.SetActive(false);
+        _difficultySelectionMenu.SetActive(true);
     }
+
+    public void handleClickTraining()
+    {
+        SettingsManager.gameMode = "Training";
+        _gameModeSelectionMenu.SetActive(false);
+        _difficultySelectionMenu.SetActive(true);
+    }
+
+    public void handleClickBackGameModeSelection()
+    {
+        _gameModeSelectionMenu.SetActive(false);
+        _roomSelectionMenu.SetActive(true);
+    }
+
+    //Difficulty Selection Menu
+
+    public void handleClickEasy()
+    {
+        SettingsManager.difficulty = "Easy";
+        _difficultySelectionMenu.SetActive(false);
+        _startMenu.SetActive(true);
+    }
+
+    public void handleClickMedium()
+    {
+        SettingsManager.difficulty = "Medium";
+        _difficultySelectionMenu.SetActive(false);
+        _startMenu.SetActive(true);
+    }
+
+    public void handleClickHard()
+    {
+        SettingsManager.difficulty = "Hard";
+        _difficultySelectionMenu.SetActive(false);
+        _startMenu.SetActive(true);
+    }
+
+    public void handleClickBackDifficultySelection()
+    {
+        _difficultySelectionMenu.SetActive(false);
+        _gameModeSelectionMenu.SetActive(true);
+    }
+
+    //Start Menu
+    public void handleClickStartGame()
+    {
+        //if (SettingsManager.room == "Bedroom")
+        //    SceneManager.LoadScene(1);
+        //else if (SettingsManager.room == "Kitchen")
+        //    SceneManager.LoadScene(2);
+        //else if (SettingsManager.room == "Zoo")
+        //    SceneManager.LoadScene(3);
+        SceneManager.LoadScene(1);
+        Debug.Log(SettingsManager.room);
+        Debug.Log(SettingsManager.gameMode);
+        Debug.Log(SettingsManager.difficulty);
+    }
+
+    public void handleClickBackStartMenu()
+    {
+        _startMenu.SetActive(false);
+        _difficultySelectionMenu.SetActive(true);
+    }
+    
+    //public void EnableVR()
+    //{
+    //    XRSettings.LoadDeviceByName("Cardboard");
+    //    _enabled = true;
+    //}
+
+
+
+    //public void Update()
+    //{
+    //    if (_enabled)
+    //    {
+    //        XRSettings.enabled = true;
+    //        _enabled = false;
+    //    }
+    //}
 }
