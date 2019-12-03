@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ObjectHandler : MonoBehaviour
 {
@@ -10,21 +11,52 @@ public class ObjectHandler : MonoBehaviour
     public static string objectToShow;
     static int numObject;
     static ArrayList obj;
+    static GameObject[] objects;
+    bool f = false;
+    bool f2 = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         obj = new ArrayList { };
-        RandomObject[] ros = (RandomObject[])FindObjectsOfType(typeof(RandomObject));
-        foreach (RandomObject r in ros)
-        {
-            foreach (GameObject g in r.spawnPoint)
-            {
-                obj.Add(g.name);
-            }
-        }
         passed = 0;
+    }
+
+
+    private void Update()
+    {
+        if (!f)
+        {
+            Setup();
+            f = true;
+        }
+    }
+    public static void Setup()
+    {
+        objects = GameObject.FindGameObjectsWithTag("floor");
+        foreach (GameObject o in objects)
+        {
+            if (o.name.Contains("(Clone)")) obj.Add(o.name.Replace("(Clone)", ""));
+        }
+        objects = GameObject.FindGameObjectsWithTag("table");
+        foreach (GameObject o in objects)
+        {
+            if (o.name.Contains("(Clone)")) obj.Add(o.name.Replace("(Clone)", ""));
+        }
+        objects = GameObject.FindGameObjectsWithTag("walls");
+        foreach (GameObject o in objects)
+        {
+            if (o.name.Contains("(Clone)")) obj.Add(o.name.Replace("(Clone)", ""));
+        }
+        objects = GameObject.FindGameObjectsWithTag("middle_walls");
+        foreach (GameObject o in objects)
+        {
+            if (o.name.Contains("(Clone)")) obj.Add(o.name.Replace("(Clone)", ""));
+        }
+        //SetText();
+        print("-----------\nObjects are:");
+        foreach (string s in obj) print(s); 
         full = obj.Count;
         numObject = Random.Range(0, obj.Count);
         objectToShow = obj[numObject].ToString();
@@ -34,7 +66,6 @@ public class ObjectHandler : MonoBehaviour
         AudioManager.Instance.ObjectSound(objectToShow);
         obj.RemoveAt(numObject);
     }
-
     public static void SetText()
     {
         passed++;
@@ -44,6 +75,7 @@ public class ObjectHandler : MonoBehaviour
             GameObject.Find("UI_Object").GetComponent<Text>().text = "Congratulations!!!";
             GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
             GameObject.Find("UI_find").GetComponent<Text>().text = "Good Job!";
+            End();
         }
         else
         {
@@ -60,7 +92,7 @@ public class ObjectHandler : MonoBehaviour
 
     public static void End()
     {
-
+        SceneManager.LoadScene(0);
     }
 
 }

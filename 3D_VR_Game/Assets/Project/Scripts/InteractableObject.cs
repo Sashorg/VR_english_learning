@@ -89,7 +89,7 @@ public class InteractableObject : MonoBehaviour
         _gazedObjectName = gameObject.name;
         _targetObjectName = ObjectHandler.objectToShow;
 
-        if(_gazedObjectName == _targetObjectName)
+        if(_gazedObjectName == _targetObjectName+"(Clone)")
         {
             // User statistics
             end_time = Time.time - start_time;

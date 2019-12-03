@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1625,6 +1625,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4648249779460548301, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648249779704628056, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4648249780786885570, guid: 37d2d12a06df5e14487dd48810dea075,
         type: 3}
       propertyPath: m_Name
@@ -1634,6 +1644,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648249780786885571, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: gvrReticle
+      value: 
+      objectReference: {fileID: 1543791944}
+    - target: {fileID: 4648249780786885573, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4648249780786885574, guid: 37d2d12a06df5e14487dd48810dea075,
         type: 3}
@@ -1739,26 +1759,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648249780786885571, guid: 37d2d12a06df5e14487dd48810dea075,
-        type: 3}
-      propertyPath: gvrReticle
-      value: 
-      objectReference: {fileID: 1543791944}
-    - target: {fileID: 4648249779460548301, guid: 37d2d12a06df5e14487dd48810dea075,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648249779704628056, guid: 37d2d12a06df5e14487dd48810dea075,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648249780786885573, guid: 37d2d12a06df5e14487dd48810dea075,
-        type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37d2d12a06df5e14487dd48810dea075, type: 3}
