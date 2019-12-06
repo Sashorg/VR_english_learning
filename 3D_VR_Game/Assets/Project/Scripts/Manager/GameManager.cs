@@ -33,6 +33,28 @@ public class GameManager : MonoBehaviour
     public GameObject lamp_laptop;
     public GameObject phone_photo;
 
+    //ZOO
+    public GameObject ant;
+  
+    public GameObject bear;
+    public GameObject bird;
+    public GameObject butterfly;
+    public GameObject camel;
+    public GameObject chameleon;
+    public GameObject chicken;
+    public GameObject crab;
+
+    public GameObject deer;
+    public GameObject dog;
+    public GameObject elephant;
+    public GameObject horse;
+
+    public GameObject panda;
+    public GameObject rabbit;
+    public GameObject rhino;
+    public GameObject squirrel;
+
+
     public GameObject VRglasses;
     // Start is called before the first frame update
     void Awake()
@@ -58,6 +80,32 @@ public class GameManager : MonoBehaviour
         ObjectPoolingManager.Instance.CreatePool(photo, 3, 4);
         ObjectPoolingManager.Instance.CreatePool(plant, 3, 4);
         ObjectPoolingManager.Instance.CreatePool(VRglasses, 3, 4);
+
+
+        ObjectPoolingManager.Instance.CreatePool(lamp_laptop, 1, 2);
+        ObjectPoolingManager.Instance.CreatePool(phone_photo, 1, 2);
+
+
+        //ZOO OBJECTS
+
+        ObjectPoolingManager.Instance.CreatePool(ant, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(bear, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(bird, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(butterfly, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(camel, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(chameleon, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(chicken, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(crab, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(deer, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(dog, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(elephant, 3, 4);
+
+        ObjectPoolingManager.Instance.CreatePool(horse, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(panda, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(rabbit, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(rhino, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(squirrel, 3, 4);
+      
 
 
         ObjectPoolingManager.Instance.CreatePool(lamp_laptop, 1, 2);
