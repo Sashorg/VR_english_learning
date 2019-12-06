@@ -86,10 +86,10 @@ public class InteractableObject : MonoBehaviour
     public void gazeCompleted()
     {
         AudioManager.Instance.ObjectSound(gameObject.name);
-        _gazedObjectName = gameObject.transform.GetChild(0).name;
-        _targetObjectName = ObjectHandler.objectToShow + "(Clone)";
+        _gazedObjectName = gameObject.name;
+        _targetObjectName = ObjectHandler.objectToShow;
 
-        if(_gazedObjectName == _targetObjectName)
+        if(_gazedObjectName == _targetObjectName+"(Clone)")
         {
             // User statistics
             end_time = Time.time - start_time;

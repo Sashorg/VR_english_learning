@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -808,6 +808,8 @@ MonoBehaviour:
   phone: {fileID: 401999105352207747, guid: ae55f94cf1086e849bb2664356efad0f, type: 3}
   photo: {fileID: 3883149430116474465, guid: 68e031caae50f7440bb047f6cf7488b4, type: 3}
   plant: {fileID: 5298206244698609718, guid: 6d3408b6a6880c646829fa0275c18022, type: 3}
+  lamp_laptop: {fileID: 0}
+  phone_photo: {fileID: 0}
   VRglasses: {fileID: 1855798260383417242, guid: e9a55bb5cc8c98c438e860f92fb2b330,
     type: 3}
 --- !u!1 &622541496
@@ -1623,15 +1625,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4648249779460548301, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648249779704628056, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4648249780786885570, guid: 37d2d12a06df5e14487dd48810dea075,
         type: 3}
       propertyPath: m_Name
-      value: Canvas (1)
+      value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 4648249780786885570, guid: 37d2d12a06df5e14487dd48810dea075,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648249780786885571, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: gvrReticle
+      value: 
+      objectReference: {fileID: 1543791944}
+    - target: {fileID: 4648249780786885573, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4648249780786885574, guid: 37d2d12a06df5e14487dd48810dea075,
         type: 3}
@@ -1736,26 +1758,6 @@ PrefabInstance:
     - target: {fileID: 4648249780786885574, guid: 37d2d12a06df5e14487dd48810dea075,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648249780786885571, guid: 37d2d12a06df5e14487dd48810dea075,
-        type: 3}
-      propertyPath: gvrReticle
-      value: 
-      objectReference: {fileID: 1543791944}
-    - target: {fileID: 4648249780786885573, guid: 37d2d12a06df5e14487dd48810dea075,
-        type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648249779460548301, guid: 37d2d12a06df5e14487dd48810dea075,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648249779704628056, guid: 37d2d12a06df5e14487dd48810dea075,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

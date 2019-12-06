@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4648249779460548303}
   m_Layer: 8
   m_Name: TimerGaze
-  m_TagString: Untagged
+  m_TagString: Gaze Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,11 +236,11 @@ GameObject:
   - component: {fileID: 4648249779579671232}
   m_Layer: 8
   m_Name: Accept
-  m_TagString: Untagged
+  m_TagString: Accept
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4648249779579671231
 RectTransform:
   m_ObjectHideFlags: 0
@@ -561,11 +561,11 @@ GameObject:
   - component: {fileID: 4648249781084019317}
   m_Layer: 8
   m_Name: Reject
-  m_TagString: Untagged
+  m_TagString: Reject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4648249781084019316
 RectTransform:
   m_ObjectHideFlags: 0
