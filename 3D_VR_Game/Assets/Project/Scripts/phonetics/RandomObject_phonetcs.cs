@@ -73,6 +73,7 @@ public class RandomObject_phonetcs : MonoBehaviour
         }
       
         objectset = new ArrayList(objlist);
+        Phonetics_Object_handler.Set_size(objectset.Count);
         objectset = reshuffle(objectset);
         int words_in_json = objectset.Count;
         // int places_on_scene = spawner.Length;
@@ -98,7 +99,7 @@ public class RandomObject_phonetcs : MonoBehaviour
         print(objectset[i]);
 
        print(objectset[i].ToString());
-
+        Phonetics_Object_handler._call(objectset[i].ToString());
        GameObject goo= ObjectPoolingManager.Instance.GetObject(objectset[i].ToString());
 
        
@@ -154,11 +155,14 @@ public class RandomObject_phonetcs : MonoBehaviour
         objectset.RemoveAt(i);
         if (objectset.Count == 0) {
             print("Contrats");
+            //здесь закончить
             return;
         }
  
       
         print(objectset[i].ToString());
+
+        Phonetics_Object_handler._call(objectset[i].ToString());
         GameObject goo = ObjectPoolingManager.Instance.GetObject(objectset[i].ToString());
 
 
@@ -181,6 +185,7 @@ public class RandomObject_phonetcs : MonoBehaviour
         int rand = Random.Range(1,objectset.Count-1);
         print(objectset.Count - 1);
         objectset.Insert(rand,reserve);
+        Phonetics_Object_handler._call(objectset[i].ToString());
         GameObject goo = ObjectPoolingManager.Instance.GetObject(objectset[i].ToString());
 
 

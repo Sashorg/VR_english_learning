@@ -21,6 +21,7 @@ public class ObjectHandler : MonoBehaviour
     {
         obj = new ArrayList { };
         passed = 0;
+        //Setup();
     }
 
 
