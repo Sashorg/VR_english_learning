@@ -5,7 +5,12 @@ using System.IO;
 
 public class JSONeasy : MonoBehaviour
 {
-    public Transform target;
+    ///objects.json, /objects_zoo.json 
+    public enum Level { objects, zooobjects };
+
+    public Level levels;
+    private string choice;
+    
     private GameObject right_wall;
     private GameObject left_wall;
     private GameObject[] spawner_floor;
@@ -30,7 +35,8 @@ public class JSONeasy : MonoBehaviour
     private int count_table = 0;
     private int amount_tables = 0;
     private ArrayList fixed_json_set;
-    private string level = SettingsManager.difficulty;
+   // private string level = SettingsManager.difficulty;
+    private string level = "Hard";
     private string[] objlist;
     // Array list is for initiating all objects, the arraylst should be equal to the number of objects attached to spawner
   
@@ -39,8 +45,12 @@ public class JSONeasy : MonoBehaviour
     {
 
     }
-    void Start()
+
+    void OnEnable()
     {
+        choice = levels.ToString();
+        choice = "/" + choice + ".json";
+        print(choice);
 
         fixed_json_set = new ArrayList();
         spawner_floor = GameObject.FindGameObjectsWithTag("spawner_floor");
@@ -49,8 +59,8 @@ public class JSONeasy : MonoBehaviour
 
         spawner_floor = reshuffle_go(spawner_floor);
         spawner_walls = reshuffle_go(spawner_walls);
-      
-        path = Application.streamingAssetsPath + "/objects.json";
+       
+        path = Application.streamingAssetsPath + choice;
         jsonString = File.ReadAllText(path);
         Objectss easyy = JsonUtility.FromJson<Objectss>(jsonString);
         if (level == "Easy")
@@ -262,6 +272,7 @@ public class JSONeasy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         // print(Physics.OverlapSphere(new Vector3(0, 1, 0), 3).Length + "last");
         //if (Physics.OverlapSphere(new Vector3(0, 1, 0), 3).Length > 0) {
         //  print(Physics.OverlapSphere(new Vector3(0, 1, 0), 3)[0]);
