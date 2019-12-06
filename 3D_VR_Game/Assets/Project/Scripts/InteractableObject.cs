@@ -88,7 +88,6 @@ public class InteractableObject : MonoBehaviour
         AudioManager.Instance.ObjectSound(gameObject.name);
         _gazedObjectName = gameObject.name;
         _targetObjectName = ObjectHandler.objectToShow;
-        print(_targetObjectName);
         if(_gazedObjectName == _targetObjectName+"(Clone)")
         //if (_gazedObjectName == _targetObjectName)
         {
@@ -108,6 +107,8 @@ public class InteractableObject : MonoBehaviour
         {
             // User statistics
             error_per_word++;
+            print("target is: " + _targetObjectName);
+            print("Pointer is: " + _gazedObjectName);
             Debug.Log("errors=" + error_per_word.ToString());
             end_time = Time.time - start_time;
             start_time = Time.time;

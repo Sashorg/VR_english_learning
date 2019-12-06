@@ -19096,6 +19096,11 @@ PrefabInstance:
       propertyPath: gvrReticle
       value: 
       objectReference: {fileID: 1543791944}
+    - target: {fileID: 4648249779704628056, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4648249780786885573, guid: 37d2d12a06df5e14487dd48810dea075,
         type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
@@ -19105,11 +19110,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648249779704628056, guid: 37d2d12a06df5e14487dd48810dea075,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37d2d12a06df5e14487dd48810dea075, type: 3}
