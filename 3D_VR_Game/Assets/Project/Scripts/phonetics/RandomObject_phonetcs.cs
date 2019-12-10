@@ -178,11 +178,18 @@ public class RandomObject_phonetcs : MonoBehaviour
 
     public void bad()
     {
+        if (objectset.Count == 1)
+        {
+            return;
+        }
         GameObject go = GameObject.FindGameObjectWithTag("now");
         go.SetActive(false);
         object reserve = objectset[i];
-        objectset.RemoveAt(i);
-        int rand = Random.Range(1,objectset.Count-1);
+        print(reserve.ToString());
+        int rand = Random.Range(1, objectset.Count);
+        objectset.RemoveAt(i);//maybe should be before int rand
+
+      
         print(objectset.Count - 1);
         objectset.Insert(rand,reserve);
         Phonetics_Object_handler._call(objectset[i].ToString());

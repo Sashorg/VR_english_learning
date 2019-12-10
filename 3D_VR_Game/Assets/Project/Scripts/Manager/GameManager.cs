@@ -30,8 +30,7 @@ public class GameManager : MonoBehaviour
     public GameObject phone;
     public GameObject photo;
     public GameObject plant;
-    public GameObject lamp_laptop;
-    public GameObject phone_photo;
+
 
     //ZOO
     public GameObject ant;
@@ -56,6 +55,12 @@ public class GameManager : MonoBehaviour
 
 
     public GameObject VRglasses;
+    public GameObject ant_pants;
+    public GameObject box_ox;
+    public GameObject dice_ice;
+    public GameObject eight_gate;
+    public GameObject pin_bin;
+    public GameObject tey_key;
     // Start is called before the first frame update
     void Awake()
     {
@@ -82,8 +87,12 @@ public class GameManager : MonoBehaviour
         ObjectPoolingManager.Instance.CreatePool(VRglasses, 3, 4);
 
 
-        ObjectPoolingManager.Instance.CreatePool(lamp_laptop, 1, 2);
-        ObjectPoolingManager.Instance.CreatePool(phone_photo, 1, 2);
+        ObjectPoolingManager.Instance.CreatePool(ant_pants, 1, 2);
+        ObjectPoolingManager.Instance.CreatePool(box_ox, 1, 2);
+        ObjectPoolingManager.Instance.CreatePool(dice_ice, 1, 2);
+        ObjectPoolingManager.Instance.CreatePool(eight_gate, 1, 2);
+        ObjectPoolingManager.Instance.CreatePool(pin_bin, 1, 2);
+        ObjectPoolingManager.Instance.CreatePool(tey_key, 1, 2);
 
 
         //ZOO OBJECTS
@@ -108,8 +117,6 @@ public class GameManager : MonoBehaviour
       
 
 
-        ObjectPoolingManager.Instance.CreatePool(lamp_laptop, 1, 2);
-        ObjectPoolingManager.Instance.CreatePool(phone_photo, 1, 2);
         canvas = GameObject.Find("Canvas (1)");
      
         XRSettings.LoadDeviceByName("");
