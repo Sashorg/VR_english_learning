@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -25,7 +26,13 @@ public class InteractableObject : MonoBehaviour
     private ArrayList list_of_mistakes = new ArrayList { };
     private ArrayList time_of_one_guess = new ArrayList { };
 
-    
+    //Delegates
+    public delegate void GoodChoice();
+    public static event GoodChoice goodChoice;
+    public delegate void BadChoice();
+    public static event BadChoice badChoice;
+
+
 
     void Start()
     {
@@ -82,39 +89,72 @@ public class InteractableObject : MonoBehaviour
 
     public void gazeCompleted()
     {
-        AudioManager.Instance.ObjectSound(gameObject.name);
         _gazedObjectName = gameObject.name;
-        _targetObjectName = ObjectHandler.objectToShow;
-        if(_gazedObjectName == _targetObjectName+"(Clone)")
-        //if (_gazedObjectName == _targetObjectName)
+        if (SettingsManager.gameType == "Phonetics")
         {
-            // User statistics
-            end_time = Time.time - start_time;
-            start_time = Time.time;
-            time_of_one_guess.Add(end_time);
-            error_per_word = 0;
-
-            // Accept/Reject feedback logic
-            _accept.enabled = true;
-
-            // Tell ObjectHandler that the right word has been found
-            ObjectHandler.SetText();
+            _targetObjectName = Phonetics_Object_handler.objectToShow;
+            if (_gazedObjectName == _targetObjectName)
+            {
+                StartCoroutine(rightChoice());
+            }
+            else
+            {
+                StartCoroutine(wrongChoice());
+            }
         }
         else
         {
-            // User statistics
-            error_per_word++;
-            print("target is: " + _targetObjectName);
-            print("Pointer is: " + _gazedObjectName);
-            Debug.Log("errors=" + error_per_word.ToString());
-            end_time = Time.time - start_time;
-            start_time = Time.time;
-            time_of_one_guess.Add(end_time);
-            num_of_mistakes++;
-            list_of_mistakes.Add(ObjectHandler.objectToShow);
+            _targetObjectName = ObjectHandler.objectToShow;
+            if (_gazedObjectName == _targetObjectName + "(Clone)")
+            //if (_gazedObjectName == _targetObjectName)
+            {
+                // User statistics
+                end_time = Time.time - start_time;
+                start_time = Time.time;
+                time_of_one_guess.Add(end_time);
+                error_per_word = 0;
 
-            // Accept/Reject feedback logic
-            _reject.enabled = true;
+                // Accept/Reject feedback logic
+                _accept.enabled = true;
+
+                // Tell ObjectHandler that the right word has been found
+                ObjectHandler.SetText();
+            }
+            else
+            {
+                AudioManager.Instance.ObjectSound(gameObject.transform.parent.root.name);
+                // User statistics
+                error_per_word++;
+                print("target is: " + _targetObjectName);
+                print("Pointer is: " + _gazedObjectName);
+                Debug.Log("errors=" + error_per_word.ToString());
+                end_time = Time.time - start_time;
+                start_time = Time.time;
+                time_of_one_guess.Add(end_time);
+                num_of_mistakes++;
+                list_of_mistakes.Add(ObjectHandler.objectToShow);
+
+                // Accept/Reject feedback logic
+                _reject.enabled = true;
+            }
         }
     }
+
+    IEnumerator wrongChoice()
+    {
+        _reject.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        _reject.enabled = false;
+        badChoice();
+    }
+
+    IEnumerator rightChoice()
+    {
+        _accept.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        _accept.enabled = false;
+        goodChoice();
+    }
+    
+    
 }

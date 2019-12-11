@@ -38,14 +38,14 @@ public class RandomObject_phonetcs : MonoBehaviour
     }
     private void OnEnable()
     {
-        Deligate.goodChoice += good;
-        Deligate.badChoice += bad;
+        InteractableObject.goodChoice += good;
+        InteractableObject.badChoice += bad;
     }
 
     private void OnDisable()
     {
-        Deligate.goodChoice -= good;
-        Deligate.badChoice -= bad;
+        InteractableObject.goodChoice -= good;
+        InteractableObject.badChoice -= bad;
     }
     void Start()
     {
@@ -53,10 +53,14 @@ public class RandomObject_phonetcs : MonoBehaviour
         fixed_json_set = new ArrayList();
       
         spawner_stand = GameObject.FindGameObjectWithTag("spawner_stand");
-        
-      
 
+
+        path = Application.persistentDataPath + "/phonetics.json";
+        #if (UNITY_EDITOR)
         path = Application.streamingAssetsPath + "/phonetics.json";
+        #endif
+
+
         jsonString = File.ReadAllText(path);
         Objectss easyy = JsonUtility.FromJson<Objectss>(jsonString);
         if (level == "Easy")

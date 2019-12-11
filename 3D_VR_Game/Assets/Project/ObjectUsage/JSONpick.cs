@@ -32,8 +32,11 @@ public class JSONpick : MonoBehaviour
         left_wall = GameObject.Find("left_wall");
         top_wall = GameObject.Find("top_wall");
         back_wall = GameObject.Find("down_wall");
-        
+
+        path = Application.persistentDataPath + "/objects.json";
+        #if (UNITY_EDITOR)
         path = Application.streamingAssetsPath + "/objects.json";
+        #endif
         jsonString = File.ReadAllText(path);
         Objects easy = JsonUtility.FromJson<Objects>(jsonString);
         print(easy.level_objects.GetType());

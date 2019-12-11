@@ -24,6 +24,7 @@ public class DemoMenuManager : MonoBehaviour
 
     public void handleClickPhoneticTraining()
     {
+        SettingsManager.gameType = "Phonetics";
         SceneManager.LoadScene(3);
     }
 

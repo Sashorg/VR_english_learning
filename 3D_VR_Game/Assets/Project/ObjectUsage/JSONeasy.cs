@@ -59,8 +59,13 @@ public class JSONeasy : MonoBehaviour
 
         spawner_floor = reshuffle_go(spawner_floor);
         spawner_walls = reshuffle_go(spawner_walls);
-       
+
+        path = Application.persistentDataPath + choice;
+
+        #if (UNITY_EDITOR)
         path = Application.streamingAssetsPath + choice;
+        #endif
+       
         jsonString = File.ReadAllText(path);
         Objectss easyy = JsonUtility.FromJson<Objectss>(jsonString);
         if (level == "Easy")

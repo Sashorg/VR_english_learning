@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Phonetics_Object_handler : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class Phonetics_Object_handler : MonoBehaviour
             {
                 objectToShow = obj2;
             }
+
+            AudioManager.Instance.ObjectSound(objectToShow);
             GameObject.Find("UI_Object").GetComponent<Text>().text = objectToShow;
             GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
         }
@@ -41,6 +44,7 @@ public class Phonetics_Object_handler : MonoBehaviour
             GameObject.Find("UI_find").GetComponent<Text>().text = "";
             GameObject.Find("UI_Object").GetComponent<Text>().text = "Congratulations!";
             GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
+            SceneManager.LoadScene(0);
         }
     }
     public static void Set_size(int size)

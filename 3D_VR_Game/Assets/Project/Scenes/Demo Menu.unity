@@ -151,7 +151,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundEffect: {fileID: 31875578}
-  clips: []
+  objectClips:
+  - {fileID: 8300000, guid: 42b84fe379c84b0438f3e17adee92d37, type: 3}
+  - {fileID: 8300000, guid: 63a76595b147ec54f8a2af6c98985fce, type: 3}
+  - {fileID: 8300000, guid: 52c53bae2f329a049a2d55bcb4e11167, type: 3}
+  - {fileID: 8300000, guid: e52f27708e45c8844be554fdb6361de9, type: 3}
+  - {fileID: 8300000, guid: af82a61915552814899ec189300177e9, type: 3}
+  - {fileID: 8300000, guid: 3c3d1e9dd67246c4686f6654a975dd16, type: 3}
+  - {fileID: 8300000, guid: 17e77e98bda321b4a9ee65b1e849600f, type: 3}
+  - {fileID: 8300000, guid: bded12fc8ce3d2d4b84eba194af9fd6b, type: 3}
+  zooClips:
+  - {fileID: 8300000, guid: 3c5d8780a064ce1438c62004ef9f008c, type: 3}
+  - {fileID: 8300000, guid: 02bff1f8f03ad5641b17f77dec2fc9fb, type: 3}
+  - {fileID: 8300000, guid: 7946378f25bd44840a8e93dbef3356a7, type: 3}
+  - {fileID: 8300000, guid: b5dec50de20c97640bd6b54447e97f66, type: 3}
+  - {fileID: 8300000, guid: 540c330126ee5f04e909bab659ef4ec4, type: 3}
+  - {fileID: 8300000, guid: c4bef2f9d89cfcd4e819f67758ebd018, type: 3}
+  - {fileID: 8300000, guid: 7dd3248d983e7e44f97c92b3cb0ef608, type: 3}
+  - {fileID: 8300000, guid: 3bca8f8069f16b84dbc21d3cae5fc5d5, type: 3}
+  - {fileID: 8300000, guid: 6db85c4abeedc844da15bc0c9afe2986, type: 3}
+  - {fileID: 8300000, guid: 3241e6ea8a41824448f1e00ff43f475e, type: 3}
+  - {fileID: 8300000, guid: 426649423ce9655498d0585159c09ded, type: 3}
+  phoneticsClips:
+  - {fileID: 8300000, guid: d248d23a17099264187d13f7fb2bce15, type: 3}
+  - {fileID: 8300000, guid: 3d41339bdc3a30c49aacb346cdf17cde, type: 3}
+  - {fileID: 8300000, guid: f84f37130dacfd3489e9c3cf01336249, type: 3}
+  - {fileID: 8300000, guid: d99677ff63846a746875c8832136c64b, type: 3}
+  - {fileID: 8300000, guid: 362039a66bcaff04aa50f0a0cd9f971d, type: 3}
+  - {fileID: 8300000, guid: d32a08a0d8ad9a04cb43970427daac49, type: 3}
+  - {fileID: 8300000, guid: 1982521b53331004b8ba23028bb7b9dd, type: 3}
+  - {fileID: 8300000, guid: dad5b65cbf8d85b4f87592c596c8185a, type: 3}
+  - {fileID: 8300000, guid: e0efe423b6d89c94396ee2639691a5f6, type: 3}
+  - {fileID: 8300000, guid: fa020d876eac4414ebd838741f7c426b, type: 3}
+  - {fileID: 8300000, guid: 3edc809e997bf69438e26c4088287935, type: 3}
+  - {fileID: 8300000, guid: f9ccd4162076c9e4b862fdc480178e65, type: 3}
 --- !u!4 &31875577
 Transform:
   m_ObjectHideFlags: 0

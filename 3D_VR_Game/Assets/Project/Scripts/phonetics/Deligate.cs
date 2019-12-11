@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Deligate : MonoBehaviour
-{
-    public delegate void GoodChoice();
-    public static event GoodChoice goodChoice;
-    public delegate void BadChoice();
-    public static event BadChoice badChoice;
+//public class Deligate : MonoBehaviour
+//{
+    //public delegate void GoodChoice();
+    //public static event GoodChoice goodChoice;
+    //public delegate void BadChoice();
+    //public static event BadChoice badChoice;
     // Start is called before the first frame update
-    void Start()
-    {
+    //void Start()
+    //{
         
-    }
+    //}
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -30,4 +30,4 @@ public class Deligate : MonoBehaviour
         }
 
     }
-}
+}*/
