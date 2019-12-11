@@ -289,9 +289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgGaze: {fileID: 0}
-  _accept: {fileID: 0}
-  _reject: {fileID: 0}
 --- !u!65 &-1969339284504884760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -303,8 +300,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.12716232, y: 0.07345071, z: 0.09909424}
+  m_Center: {x: -0.0029761018, y: -0.018884975, z: 0.005383908}
 --- !u!1 &2537538291260418115
 GameObject:
   m_ObjectHideFlags: 0

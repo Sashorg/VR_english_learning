@@ -232,9 +232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgGaze: {fileID: 0}
-  _accept: {fileID: 0}
-  _reject: {fileID: 0}
 --- !u!23 &5562472760515400260
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -284,8 +281,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.16073339, y: 0.11060389, z: 0.08959695}
+  m_Center: {x: 0.023029879, y: -0.005067836, z: -0.010464742}
 --- !u!1 &5562672151345951733
 GameObject:
   m_ObjectHideFlags: 0

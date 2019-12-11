@@ -99,7 +99,7 @@ public class RandomObject_phonetcs : MonoBehaviour
         print(objectset[i]);
 
        print(objectset[i].ToString());
-        Phonetics_Object_handler._call(objectset[i].ToString());
+        Phonetics_Object_handler._call(objectset[i].ToString(), "good");
        GameObject goo= ObjectPoolingManager.Instance.GetObject(objectset[i].ToString());
 
        
@@ -149,23 +149,21 @@ public class RandomObject_phonetcs : MonoBehaviour
         return alpha;
     }
     public void good() {
+        print("good");
         GameObject go = GameObject.FindGameObjectWithTag("now");
         print(go.name);
         go.SetActive(false);
         objectset.RemoveAt(i);
-        if (objectset.Count == 0) {
-            print("Contrats");
-            //здесь закончить
-            return;
+        if (objectset.Count != 0)
+        {
+            print(objectset[i].ToString());
+            GameObject goo = ObjectPoolingManager.Instance.GetObject(objectset[i].ToString());
+            Phonetics_Object_handler._call(objectset[i].ToString(), "good");
         }
- 
-      
-        print(objectset[i].ToString());
-
-        Phonetics_Object_handler._call(objectset[i].ToString());
-        GameObject goo = ObjectPoolingManager.Instance.GetObject(objectset[i].ToString());
-
-
+        else
+        {
+            Phonetics_Object_handler._call("", "good");
+        }
         print("we here2");
         goo.transform.position = spawner_stand.gameObject.transform.position;
         goo.transform.rotation = spawner_stand.gameObject.transform.rotation;
@@ -173,6 +171,7 @@ public class RandomObject_phonetcs : MonoBehaviour
 
         if (changeRoadEvent != null)
             changeRoadEvent();
+
 
     }
 
@@ -192,7 +191,7 @@ public class RandomObject_phonetcs : MonoBehaviour
       
         print(objectset.Count - 1);
         objectset.Insert(rand,reserve);
-        Phonetics_Object_handler._call(objectset[i].ToString());
+        Phonetics_Object_handler._call(objectset[i].ToString(), "bad");
         GameObject goo = ObjectPoolingManager.Instance.GetObject(objectset[i].ToString());
 
 

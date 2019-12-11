@@ -14,22 +14,34 @@ public class Phonetics_Object_handler : MonoBehaviour
 
     public static string objectToShow;
 
-    public static void _call(string str)
+    public static void _call(string str, string choice)
     {
-        dev_index = str.IndexOf(dev) + 1;
-        obj2 = str.Substring(dev_index);
-        obj1 = str.Replace(dev + obj2, "");
-        if(GetRandomNum(0,full) == 1)
+        if (choice == "good")
+            passed++;
+        if (passed != full)
         {
-            objectToShow = obj1;
+            print("Error");
+            dev_index = str.IndexOf(dev) + 1;
+            obj2 = str.Substring(dev_index);
+            obj1 = str.Replace(dev + obj2, "");
+            if (GetRandomNum(0, full) == 1)
+            {
+                objectToShow = obj1;
+            }
+            else
+            {
+                objectToShow = obj2;
+            }
+            GameObject.Find("UI_Object").GetComponent<Text>().text = objectToShow;
+            GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
         }
         else
         {
-            objectToShow = obj2;
+            print("OK");
+            GameObject.Find("UI_find").GetComponent<Text>().text = "";
+            GameObject.Find("UI_Object").GetComponent<Text>().text = "Congratulations!";
+            GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
         }
-        passed++;
-        GameObject.Find("UI_Object").GetComponent<Text>().text = objectToShow;
-        GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
     }
     public static void Set_size(int size)
     {

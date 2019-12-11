@@ -9,14 +9,11 @@ public class InteractableObject : MonoBehaviour
     private bool _gvrStatus = false;
     private float _gvrTimer = 0;
     private float _totalTime = 2.0f;
-    [SerializeField]
     private Image imgGaze; //We get this image by the Tag "Gaze Image"
 
     // Accept/Reject feedback logic
     private bool _gazeComplete = false;
-    [SerializeField]
     private Image _accept; //We get this GameObject by the Tag "Accept"
-    [SerializeField]
     private Image _reject; //We get this GameObject by the Tag "Reject"
     private string _gazedObjectName, _targetObjectName;
 

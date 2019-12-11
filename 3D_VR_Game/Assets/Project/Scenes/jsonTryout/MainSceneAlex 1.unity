@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaf9ce5db2f2ca418bd7786f4c539f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 269755669}
+  levels: 0
 --- !u!4 &126731558
 Transform:
   m_ObjectHideFlags: 0
@@ -808,10 +808,30 @@ MonoBehaviour:
   phone: {fileID: 401999105352207747, guid: ae55f94cf1086e849bb2664356efad0f, type: 3}
   photo: {fileID: 3883149430116474465, guid: 68e031caae50f7440bb047f6cf7488b4, type: 3}
   plant: {fileID: 5298206244698609718, guid: 6d3408b6a6880c646829fa0275c18022, type: 3}
-  lamp_laptop: {fileID: 0}
-  phone_photo: {fileID: 0}
+  ant: {fileID: 0}
+  bear: {fileID: 0}
+  bird: {fileID: 0}
+  butterfly: {fileID: 0}
+  camel: {fileID: 0}
+  chameleon: {fileID: 0}
+  chicken: {fileID: 0}
+  crab: {fileID: 0}
+  deer: {fileID: 0}
+  dog: {fileID: 0}
+  elephant: {fileID: 0}
+  horse: {fileID: 0}
+  panda: {fileID: 0}
+  rabbit: {fileID: 0}
+  rhino: {fileID: 0}
+  squirrel: {fileID: 0}
   VRglasses: {fileID: 1855798260383417242, guid: e9a55bb5cc8c98c438e860f92fb2b330,
     type: 3}
+  ant_pants: {fileID: 0}
+  box_ox: {fileID: 0}
+  dice_ice: {fileID: 0}
+  eight_gate: {fileID: 0}
+  pin_bin: {fileID: 0}
+  tey_key: {fileID: 0}
 --- !u!1 &622541496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,6 +1560,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1430025676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1430025677}
+  - component: {fileID: 1430025678}
+  m_Layer: 0
+  m_Name: VrEnabler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1430025677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430025676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.351242, y: 13.636475, z: 9.928164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1430025678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430025676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c06b45627a3c0cb4c899834798c994f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1500175691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,6 +1698,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4648249779704628056, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648249780786885571, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: gvrReticle
+      value: 
+      objectReference: {fileID: 1543791944}
     - target: {fileID: 4648249780786885574, guid: 37d2d12a06df5e14487dd48810dea075,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1740,21 +1813,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4648249780786885571, guid: 37d2d12a06df5e14487dd48810dea075,
-        type: 3}
-      propertyPath: gvrReticle
-      value: 
-      objectReference: {fileID: 1543791944}
-    - target: {fileID: 4648249779704628056, guid: 37d2d12a06df5e14487dd48810dea075,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4648249780786885573, guid: 37d2d12a06df5e14487dd48810dea075,
         type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4648249780786885573, guid: 37d2d12a06df5e14487dd48810dea075,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1536041221}
     - target: {fileID: 4648249779460548301, guid: 37d2d12a06df5e14487dd48810dea075,
         type: 3}
       propertyPath: m_IsActive
