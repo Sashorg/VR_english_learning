@@ -114,35 +114,6 @@ public class GameManager : MonoBehaviour
         ObjectPoolingManager.Instance.CreatePool(rabbit, 3, 4);
         ObjectPoolingManager.Instance.CreatePool(rhino, 3, 4);
         ObjectPoolingManager.Instance.CreatePool(squirrel, 3, 4);
-      
-
-
-        canvas = GameObject.Find("Canvas (1)");
-     
-        XRSettings.LoadDeviceByName("");
-        XRSettings.enabled = false;
-        _enabled = false;
     }
 
-    public void EnableVR()
-    {
-        XRSettings.LoadDeviceByName("Cardboard");
-        _enabled = true;
-        button.SetActive(false);
-        canvas.SetActive(true);
-        Debug.Log("Enabled");
-        
-
-    }
-
-
-
-    public void Update()
-    {
-        if (_enabled)
-        {
-            XRSettings.enabled = true;
-            _enabled = false;
-        }
-    }
 }
