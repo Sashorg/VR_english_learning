@@ -93,7 +93,7 @@ public class ObjectHandler : MonoBehaviour
 
     public static void End()
     {
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
     }
 
 }

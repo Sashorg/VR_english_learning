@@ -44,7 +44,7 @@ public class Phonetics_Object_handler : MonoBehaviour
             GameObject.Find("UI_find").GetComponent<Text>().text = "";
             GameObject.Find("UI_Object").GetComponent<Text>().text = "Congratulations!";
             GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
         }
     }
     public static void Set_size(int size)
