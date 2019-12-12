@@ -47,6 +47,7 @@ public class ObjectPool
             parent.name = obj.name;
             parent.transform.position = Vector3.zero;
             parent.transform.rotation = Quaternion.identity;
+            GameObject.DontDestroyOnLoad(parent);
         }
 
         //instantiate a new list of game objects to store our pooled objects in.
