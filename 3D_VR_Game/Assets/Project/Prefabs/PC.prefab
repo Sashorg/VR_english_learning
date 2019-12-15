@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -8479131786429074937}
   - component: {fileID: 8947537011238760997}
   - component: {fileID: 6100140322400995668}
+  - component: {fileID: 8988490692746624889}
   m_Layer: 0
   m_Name: PC
   m_TagString: table
@@ -46,9 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgGaze: {fileID: 0}
-  _accept: {fileID: 0}
-  _reject: {fileID: 0}
 --- !u!65 &8947537011238760997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60,8 +58,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.120435, y: 1, z: 1}
-  m_Center: {x: -0.2841215, y: 0.51, z: 0}
+  m_Size: {x: 0.9773674, y: 0.2433579, z: 1}
+  m_Center: {x: -0.21258783, y: 0.13167894, z: 0}
 --- !u!114 &6100140322400995668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +103,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!65 &8988490692746624889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7932649325304403465}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9768723, y: 0.57652855, z: 0.22189182}
+  m_Center: {x: -0.40771097, y: 0.77424836, z: -0.3890541}
 --- !u!1001 &7412901848994646098
 PrefabInstance:
   m_ObjectHideFlags: 0

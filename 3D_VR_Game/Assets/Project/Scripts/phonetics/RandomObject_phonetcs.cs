@@ -1,4 +1,4 @@
-﻿
+﻿    
 
 using System.Collections;
 using System.Collections.Generic;
@@ -162,6 +162,8 @@ public class RandomObject_phonetcs : MonoBehaviour
         {
             print(objectset[i].ToString());
             GameObject goo = ObjectPoolingManager.Instance.GetObject(objectset[i].ToString());
+            goo.transform.position = spawner_stand.gameObject.transform.position;
+            goo.transform.rotation = spawner_stand.gameObject.transform.rotation;
             Phonetics_Object_handler._call(objectset[i].ToString(), "good");
         }
         else
@@ -169,8 +171,7 @@ public class RandomObject_phonetcs : MonoBehaviour
             Phonetics_Object_handler._call("", "good");
         }
         print("we here2");
-        goo.transform.position = spawner_stand.gameObject.transform.position;
-        goo.transform.rotation = spawner_stand.gameObject.transform.rotation;
+
         print(goo.transform.position);
 
         if (changeRoadEvent != null)
