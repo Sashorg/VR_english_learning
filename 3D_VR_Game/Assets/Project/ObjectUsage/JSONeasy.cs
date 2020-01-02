@@ -6,7 +6,7 @@ using System.IO;
 public class JSONeasy : MonoBehaviour
 {
     ///objects.json, /objects_zoo.json 
-    public enum Level { objects, zooobjects };
+    public enum Level { objects, zooobjects , tryout};
 
     public Level levels;
     private string choice;
@@ -99,6 +99,7 @@ public class JSONeasy : MonoBehaviour
 
 
         foreach (string goe in objlist) {
+            
             if (goe == "table") {
                 goo = ObjectPoolingManager.Instance.GetObject(goe);
 
