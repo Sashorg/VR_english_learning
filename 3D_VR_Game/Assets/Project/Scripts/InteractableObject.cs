@@ -50,8 +50,19 @@ public class InteractableObject : MonoBehaviour
         start_time = Time.time;
     }
 
+
     void Update()
     {
+        if(imgGaze == null || _accept == null || _reject == null)
+        {
+            imgGaze = GameObject.FindGameObjectWithTag("Gaze Image").GetComponent<Image>();
+            imgGaze.fillAmount = 0;
+            _accept = GameObject.FindGameObjectWithTag("Accept").GetComponent<Image>();
+            _reject = GameObject.FindGameObjectWithTag("Reject").GetComponent<Image>();
+            _reject.enabled = false;
+            _accept.enabled = false;
+        }
+
         // Gaze Timer logic
         if (_gvrStatus)
         {
