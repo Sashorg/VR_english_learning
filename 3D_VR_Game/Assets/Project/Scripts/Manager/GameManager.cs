@@ -64,56 +64,56 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        ObjectPoolingManager.Instance.CreatePool(table, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(chair, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(closet, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(bed, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(printer, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(speakers, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(bin, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(fan, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(clock, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(lamp, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(mouse, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(table, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(chair, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(closet, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(bed, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(printer, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(speakers, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(bin, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(fan, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(clock, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(lamp, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(mouse, 6, 10);
 
-        ObjectPoolingManager.Instance.CreatePool(guitar, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(laptop, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(mug, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(PC, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(pen, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(phone, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(photo, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(plant, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(VRglasses, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(guitar, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(laptop, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(mug, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(PC, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(pen, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(phone, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(photo, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(plant, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(VRglasses, 6, 10);
 
 
-        ObjectPoolingManager.Instance.CreatePool(ant_pants, 1, 2);
-        ObjectPoolingManager.Instance.CreatePool(box_ox, 1, 2);
-        ObjectPoolingManager.Instance.CreatePool(dice_ice, 1, 2);
-        ObjectPoolingManager.Instance.CreatePool(eight_gate, 1, 2);
-        ObjectPoolingManager.Instance.CreatePool(pin_bin, 1, 2);
-        ObjectPoolingManager.Instance.CreatePool(tey_key, 1, 2);
+        ObjectPoolingManager.Instance.CreatePool(ant_pants, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(box_ox, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(dice_ice, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(eight_gate, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(pin_bin, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(tey_key, 6, 10);
 
 
         //ZOO OBJECTS
 
-        ObjectPoolingManager.Instance.CreatePool(ant, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(bear, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(bird, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(butterfly, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(camel, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(chameleon, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(chicken, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(crab, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(deer, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(dog, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(elephant, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(ant, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(bear, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(bird, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(butterfly, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(camel, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(chameleon, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(chicken, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(crab, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(deer, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(dog, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(elephant, 6, 10);
 
-        ObjectPoolingManager.Instance.CreatePool(horse, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(panda, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(rabbit, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(rhino, 3, 4);
-        ObjectPoolingManager.Instance.CreatePool(squirrel, 3, 4);
+        ObjectPoolingManager.Instance.CreatePool(horse, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(panda, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(rabbit, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(rhino, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(squirrel, 6, 10);
     }
 
 }
