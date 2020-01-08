@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/phonetics.unity
     guid: 8a6c82db199b14844aa39195f3d2ba8a
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Project/Scenes/jsonTryout/tryout.unity
+    guid: f379cb0339280034086d3a13e022755e
   m_configObjects: {}
