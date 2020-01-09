@@ -18,14 +18,6 @@ public class InteractableObject : MonoBehaviour
     private Image _reject; //We get this GameObject by the Tag "Reject"
     private string _gazedObjectName, _targetObjectName;
 
-    // User Statistics
-    private float start_time;
-    private float end_time;
-    private int num_of_mistakes = 0;
-    private int error_per_word = 0;
-    private ArrayList list_of_mistakes = new ArrayList { };
-    private ArrayList time_of_one_guess = new ArrayList { };
-
     //Delegates
     public delegate void GoodChoice();
     public static event GoodChoice goodChoice;
@@ -51,9 +43,6 @@ public class InteractableObject : MonoBehaviour
         _reject = GameObject.FindGameObjectWithTag("Reject").GetComponent<Image>();
         _reject.enabled = false;
         _accept.enabled = false;
-
-        // User Statistics 
-        start_time = Time.time;
 
         //Learning Mode
         _objectText = GameObject.Find("UI_Object").GetComponent<Text>();
@@ -129,12 +118,6 @@ public class InteractableObject : MonoBehaviour
             if (_gazedObjectName == _targetObjectName + "(Clone)")
             //if (_gazedObjectName == _targetObjectName)
             {
-                // User statistics
-                end_time = Time.time - start_time;
-                start_time = Time.time;
-                time_of_one_guess.Add(end_time);
-                error_per_word = 0;
-
                 // Accept/Reject feedback logic
                 _accept.enabled = true;
 
@@ -145,16 +128,10 @@ public class InteractableObject : MonoBehaviour
             {
                 AudioManager.Instance.ObjectSound(gameObject.transform.parent.root.name);
                 // User statistics
-                error_per_word++;
                 print("target is: " + _targetObjectName);
                 print("Pointer is: " + _gazedObjectName);
-                Debug.Log("errors=" + error_per_word.ToString());
-                end_time = Time.time - start_time;
-                start_time = Time.time;
-                time_of_one_guess.Add(end_time);
-                num_of_mistakes++;
-                list_of_mistakes.Add(ObjectHandler.objectToShow);
-
+                StatisticsManager.countMistake();
+                StatisticsManager.countWordMistake(gameObject.transform.parent.root.name);
                 // Accept/Reject feedback logic
                 _reject.enabled = true;
             }

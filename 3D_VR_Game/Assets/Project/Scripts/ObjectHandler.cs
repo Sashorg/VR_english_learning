@@ -82,6 +82,8 @@ public class ObjectHandler : MonoBehaviour
             GameObject.Find("UI_Object").GetComponent<Text>().text = "Congratulations!!!";
             GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
             GameObject.Find("UI_find").GetComponent<Text>().text = "Good Job!";
+            StatisticsManager.stopTimer();
+            StatisticsManager.gameOver();
             End();
         }
         else

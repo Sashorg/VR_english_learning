@@ -81,6 +81,10 @@ public class GameManager : MonoBehaviour
             _find.SetActive(false);
             _objectText.text = "Look at object!";
         }
+        else
+        {
+            StatisticsManager.startTimer();
+        }
 
         ObjectPoolingManager.Instance.CreatePool(table, 6, 10);
         ObjectPoolingManager.Instance.CreatePool(chair, 6, 10);
