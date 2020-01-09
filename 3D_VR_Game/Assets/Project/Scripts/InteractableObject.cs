@@ -88,7 +88,7 @@ public class InteractableObject : MonoBehaviour
         {
             if (gameObject.name == "door")
             {
-                print("kek");
+
                 anim.Play("open");
                 coroutine = WaitAndPrint(0.8f);
                 StartCoroutine(coroutine);

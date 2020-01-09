@@ -36,7 +36,7 @@ public class changescen1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
            
-            SceneManager.LoadScene("zoo");
+            SceneManager.LoadScene("bedroom");
 
         }
 

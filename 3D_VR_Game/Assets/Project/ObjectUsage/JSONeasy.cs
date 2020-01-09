@@ -99,14 +99,19 @@ public class JSONeasy : MonoBehaviour
 
 
         foreach (string goe in objlist) {
-            
+            print(count_floor);
+            print(count_middle_walls);
+            print(count_table);
+            print(count_walls);
+            print(amount_tables);
+           
             if (goe == "table") {
                 goo = ObjectPoolingManager.Instance.GetObject(goe);
-
+                print("QWEQWEQWEQWEQWEQWEQWEQWEQWEQWEQWEQWEW");
                 if (count_floor >= spawner_floor.Length)
                 {
                     goo.SetActive(false);
-                    print(goo.name + "was dectivated");
+                    print(goo.name + "was dectivatedDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
 
                 }
                 else
@@ -244,6 +249,8 @@ public class JSONeasy : MonoBehaviour
                         spawner_table = reshuffle_go(spawner_table);
 
                     }
+                    print(spawner_table.Length.ToString());
+                    print(count_table);
                     if (count_table >= spawner_table.Length)
                 {
                     goo.SetActive(false);
@@ -264,7 +271,7 @@ public class JSONeasy : MonoBehaviour
                 //  goo.transform.position =
 
             }
-            print(goo.tag);
+           // print(goo.tag);
             // goo.transform.position  
         }
         }
