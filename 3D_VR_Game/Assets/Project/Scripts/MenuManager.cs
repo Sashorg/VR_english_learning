@@ -1,202 +1,84 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.XR;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    private bool _enabled = false;
-    private GameObject _initialMenu;
-    private GameObject _gameTypeSelectionMenu;
-    private GameObject _roomSelectionMenu;
-    private GameObject _gameModeSelectionMenu;
-    private GameObject _difficultySelectionMenu;
-    private GameObject _startMenu;
+    [SerializeField]
+    private GameObject _initialScreen, _levelSelection;
 
-    void Awake()
+    [SerializeField]
+    private Text _gameModeText, _roomText, _gameTypeText, _difficultyText;
+
+    [SerializeField]
+    private Dropdown _gameModeDropdown, _roomDropdown, _gameTypeDropdown, _difficultyDropdown;
+
+    private void Start()
     {
-        _initialMenu = GameObject.Find("Initial Menu");
-        _gameTypeSelectionMenu = GameObject.Find("Game Type Selection Menu");
-        _roomSelectionMenu = GameObject.Find("Room Selection Menu");
-        _gameModeSelectionMenu = GameObject.Find("Game Mode Selection Menu");
-        _difficultySelectionMenu = GameObject.Find("Difficulty Selection Menu");
-        _startMenu = GameObject.Find("Start Menu");
-        _initialMenu.SetActive(true);
-        _gameTypeSelectionMenu.SetActive(false);
-        _roomSelectionMenu.SetActive(false);
-        _gameModeSelectionMenu.SetActive(false);
-        _difficultySelectionMenu.SetActive(false);
-        _startMenu.SetActive(false);
-        XRSettings.LoadDeviceByName("");
-        XRSettings.enabled = false;
+        SettingsManager.gameMode = _gameModeText.text;
+        SettingsManager.room = _roomText.text;
+        SettingsManager.gameType = _gameTypeText.text;
+        SettingsManager.difficulty = _difficultyText.text;
     }
 
-    //Initial Menu
-    public void handleClickPlay()
+    public void onClickPlay()
     {
-        _initialMenu.SetActive(false);
-        _gameTypeSelectionMenu.SetActive(true);
+        _initialScreen.SetActive(false);
+        _levelSelection.SetActive(true);
     }
 
-    public void handleClickOptions()
-    {
-        //Options menu (audio volume)
-    }
-
-    public void handleClickExit()
+    public void onClickExit()
     {
         Application.Quit();
     }
 
-    //Game Type Selection Menu
-    public void handleClickVocabulary()
+    public void onGameModeChange(int mode)
     {
-        SettingsManager.gameType = "Vocabulary";
-        _gameTypeSelectionMenu.SetActive(false);
-        _roomSelectionMenu.SetActive(true);
-    }
+        SettingsManager.gameMode = _gameModeText.text;
 
-    public void handleClickPhonetic()
-    {
-
-        SettingsManager.gameType = "Phonetic";
-        _gameTypeSelectionMenu.SetActive(false);
-        _difficultySelectionMenu.SetActive(true);
-    }
-
-    public void handleClickBackGameTypeSelection()
-    {
-        _gameTypeSelectionMenu.SetActive(false);
-        _startMenu.SetActive(true);
-    }
-
-    //Room Selection Menu
-
-    public void handleClickBedroom()
-    {
-        SettingsManager.room = "Bedroom";
-        _roomSelectionMenu.SetActive(false);
-        _gameModeSelectionMenu.SetActive(true);
-    }
-
-    public void handleClickKitchen()
-    {
-        SettingsManager.room = "Kitchen";
-        _roomSelectionMenu.SetActive(false);
-        _gameModeSelectionMenu.SetActive(true);
-    }
-
-    public void handleClickZoo()
-    {
-        SettingsManager.room = "Zoo";
-        _roomSelectionMenu.SetActive(false);
-        _gameModeSelectionMenu.SetActive(true);
-    }
-
-    public void handleClickBackRoomSelection()
-    {
-        _roomSelectionMenu.SetActive(false);
-        _gameTypeSelectionMenu.SetActive(true);
-    }
-
-    //Game Mode Selection Menu
-
-    public void handleClickLearning()
-    {
-        SettingsManager.gameMode = "Learning";
-        _gameModeSelectionMenu.SetActive(false);
-        _difficultySelectionMenu.SetActive(true);
-    }
-
-    public void handleClickTraining()
-    {
-        SettingsManager.gameMode = "Training";
-        _gameModeSelectionMenu.SetActive(false);
-        _difficultySelectionMenu.SetActive(true);
-    }
-
-    public void handleClickBackGameModeSelection()
-    {
-        _gameModeSelectionMenu.SetActive(false);
-        _roomSelectionMenu.SetActive(true);
-    }
-
-    //Difficulty Selection Menu
-
-    public void handleClickEasy()
-    {
-        SettingsManager.difficulty = "Easy";
-        _difficultySelectionMenu.SetActive(false);
-        _startMenu.SetActive(true);
-    }
-
-    public void handleClickMedium()
-    {
-        SettingsManager.difficulty = "Medium";
-        _difficultySelectionMenu.SetActive(false);
-        _startMenu.SetActive(true);
-    }
-
-    public void handleClickHard()
-    {
-        SettingsManager.difficulty = "Hard";
-        _difficultySelectionMenu.SetActive(false);
-        _startMenu.SetActive(true);
-    }
-
-    public void handleClickBackDifficultySelection()
-    {
-        if (SettingsManager.gameType == "Vocabulary")
+        if(_gameModeText.text == "Phonetics")
         {
-            _difficultySelectionMenu.SetActive(false);
-            _gameModeSelectionMenu.SetActive(true);
+            _roomDropdown.interactable = false;
+            _roomText.text = "Phonetics Room";
+            SettingsManager.room = "Phonetics Room";
+            _gameTypeDropdown.interactable = false;
+            _gameTypeText.text = "Training";
+            SettingsManager.gameType = "Training";
         }
-        else if (SettingsManager.gameType == "Phonetic")
+
+        if (_gameModeText.text == "Vocabulary")
         {
-            _difficultySelectionMenu.SetActive(false);
-            _gameTypeSelectionMenu.SetActive(true);
+            _roomDropdown.interactable = true;
+            _roomText.text = "Bedroom";
+            SettingsManager.room = "Bedroom";
+            _gameTypeDropdown.interactable = true;
+            _gameTypeText.text = "Training";
+            SettingsManager.gameType = "Training";
         }
     }
 
-    //Start Menu
-    public void handleClickStartGame()
+    public void onLevelChange(int mode)
     {
-        if (SettingsManager.room == "Bedroom")
-           SceneManager.LoadScene(2);
-        if (SettingsManager.gameType == "Phonetic")
-            SceneManager.LoadScene(3);
-
-        //else if (SettingsManager.room == "Kitchen")
-        //    SceneManager.LoadScene(2);
-        //else if (SettingsManager.room == "Zoo")
-        //    SceneManager.LoadScene(3);
-       // SceneManager.LoadScene(2);
-        Debug.Log(SettingsManager.room);
-        Debug.Log(SettingsManager.gameMode);
-        Debug.Log(SettingsManager.difficulty);
+        SettingsManager.room = _roomText.text;
     }
 
-    public void handleClickBackStartMenu()
+    public void onGameTypeChange(int mode)
     {
-        _startMenu.SetActive(false);
-        _difficultySelectionMenu.SetActive(true);
+        SettingsManager.gameType = _gameTypeText.text;
     }
-    
-    //public void EnableVR()
-    //{
-    //    XRSettings.LoadDeviceByName("Cardboard");
-    //    _enabled = true;
-    //}
 
+    public void onDifficultyChange(int mode)
+    {
+        SettingsManager.difficulty = _difficultyText.text;
+    }
 
-
-    //public void Update()
-    //{
-    //    if (_enabled)
-    //    {
-    //        XRSettings.enabled = true;
-    //        _enabled = false;
-    //    }
-    //}
+    public void onClickStart()
+    {
+        //Load Right Scene depending on SettingsManager configuration
+        print("Game Mode: " + SettingsManager.gameMode);
+        print("Room: " + SettingsManager.room);
+        print("Game Type: " + SettingsManager.gameType);
+        print("Difficulty: " + SettingsManager.difficulty);
+    }
 }
