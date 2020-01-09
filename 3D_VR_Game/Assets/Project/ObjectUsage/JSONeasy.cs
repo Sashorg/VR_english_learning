@@ -227,6 +227,11 @@ public class JSONeasy : MonoBehaviour
                             print("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
                          
                             table = ObjectPoolingManager.Instance.GetObject("table");
+                            for (int i = 0; i < table.transform.GetChild(0).transform.childCount; i++) {
+                                table.transform.GetChild(0).gameObject.transform.GetChild(i).gameObject.SetActive(true);
+                                //print(table.transform.GetChild(i).gameObject);
+                            } 
+                          
                             amount_tables = amount_tables + 1;
 
                             if (count_floor >= spawner_floor.Length)

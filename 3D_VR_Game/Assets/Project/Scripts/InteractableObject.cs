@@ -90,7 +90,7 @@ public class InteractableObject : MonoBehaviour
             {
 
                 anim.Play("open");
-                coroutine = WaitAndPrint(0.8f);
+                coroutine = WaitAndPrint(0.5f);
                 StartCoroutine(coroutine);
                
             }
@@ -180,8 +180,17 @@ public class InteractableObject : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(waitTime);
+            GameObject[] go = changescen.GetDontDestroyOnLoadObjects();
+            foreach (GameObject g in go)
+            {
+                print(g.name);
+                for (int i = 0; i < g.transform.childCount; i++)
+                {
+                    g.transform.GetChild(i).gameObject.SetActive(false);
+                }
+                //g.SetActive(false);
+            }
             SceneManager.LoadScene(gameObject.tag.ToString());
-            print("WaitAndPrint " + Time.time);
         }
     }
     IEnumerator rightChoice()
