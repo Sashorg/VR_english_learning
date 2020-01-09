@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1292,7 +1292,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundEffect: {fileID: 1218271527}
-  objectClips: []
+  objectClips:
+  - {fileID: 8300000, guid: 42b84fe379c84b0438f3e17adee92d37, type: 3}
+  - {fileID: 8300000, guid: 63a76595b147ec54f8a2af6c98985fce, type: 3}
+  - {fileID: 8300000, guid: 52c53bae2f329a049a2d55bcb4e11167, type: 3}
+  - {fileID: 8300000, guid: e52f27708e45c8844be554fdb6361de9, type: 3}
+  - {fileID: 8300000, guid: af82a61915552814899ec189300177e9, type: 3}
+  - {fileID: 8300000, guid: 3c3d1e9dd67246c4686f6654a975dd16, type: 3}
+  - {fileID: 8300000, guid: 17e77e98bda321b4a9ee65b1e849600f, type: 3}
+  - {fileID: 8300000, guid: bded12fc8ce3d2d4b84eba194af9fd6b, type: 3}
+  - {fileID: 8300000, guid: d2fb3fffd3bba0845af6851a337ba094, type: 3}
   zooClips: []
   phoneticsClips: []
 --- !u!4 &1218271529

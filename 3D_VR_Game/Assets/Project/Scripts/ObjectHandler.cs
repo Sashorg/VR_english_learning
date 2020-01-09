@@ -19,18 +19,24 @@ public class ObjectHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        obj = new ArrayList { };
-        passed = 0;
+        if(SettingsManager.gameMode == "Training")
+        {
+            obj = new ArrayList { };
+            passed = 0;
+        }
         //Setup();
     }
 
 
     private void Update()
     {
-        if (!f)
+        if (SettingsManager.gameMode == "Training")
         {
-            Setup();
-            f = true;
+            if (!f)
+            {
+                Setup();
+                f = true;
+            }
         }
     }
     public static void Setup()

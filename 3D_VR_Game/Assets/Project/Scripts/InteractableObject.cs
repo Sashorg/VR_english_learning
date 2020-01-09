@@ -32,6 +32,12 @@ public class InteractableObject : MonoBehaviour
     public delegate void BadChoice();
     public static event BadChoice badChoice;
 
+    //Learning Mode Objects
+    [SerializeField]
+    private GameObject _object, _score, _find;
+    [SerializeField]
+    private Text _objectText;
+
 
 
     void Start()
@@ -48,6 +54,10 @@ public class InteractableObject : MonoBehaviour
 
         // User Statistics 
         start_time = Time.time;
+
+        //Learning Mode
+        _objectText = GameObject.Find("UI_Object").GetComponent<Text>();
+
     }
 
 
@@ -113,7 +123,7 @@ public class InteractableObject : MonoBehaviour
                 StartCoroutine(wrongChoice());
             }
         }
-        else
+        else if (SettingsManager.gameMode == "Training")
         {
             _targetObjectName = ObjectHandler.objectToShow;
             if (_gazedObjectName == _targetObjectName + "(Clone)")
@@ -148,6 +158,11 @@ public class InteractableObject : MonoBehaviour
                 // Accept/Reject feedback logic
                 _reject.enabled = true;
             }
+        }
+        else if (SettingsManager.gameMode == "Learning")
+        {
+            _objectText.text = gameObject.transform.parent.root.name;
+            AudioManager.Instance.ObjectSound(gameObject.transform.parent.root.name);
         }
     }
 

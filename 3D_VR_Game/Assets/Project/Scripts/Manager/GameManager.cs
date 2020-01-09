@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -61,9 +62,26 @@ public class GameManager : MonoBehaviour
     public GameObject eight_gate;
     public GameObject pin_bin;
     public GameObject tey_key;
+
+    //Learning Mode
+    private GameObject _object, _score, _find;
+    private Text _objectText;
+
     // Start is called before the first frame update
     void Awake()
     {
+        if (SettingsManager.gameMode == "Learning")
+        {
+            _object = GameObject.Find("UI_Object");
+            _score = GameObject.Find("UI_Score");
+            _find = GameObject.Find("UI_find");
+            _objectText = GameObject.Find("UI_Object").GetComponent<Text>();
+
+            _score.SetActive(false);
+            _find.SetActive(false);
+            _objectText.text = "Look at object!";
+        }
+
         ObjectPoolingManager.Instance.CreatePool(table, 6, 10);
         ObjectPoolingManager.Instance.CreatePool(chair, 6, 10);
         ObjectPoolingManager.Instance.CreatePool(closet, 6, 10);
@@ -114,6 +132,8 @@ public class GameManager : MonoBehaviour
         ObjectPoolingManager.Instance.CreatePool(rabbit, 6, 10);
         ObjectPoolingManager.Instance.CreatePool(rhino, 6, 10);
         ObjectPoolingManager.Instance.CreatePool(squirrel, 6, 10);
+
+        
     }
 
 }
