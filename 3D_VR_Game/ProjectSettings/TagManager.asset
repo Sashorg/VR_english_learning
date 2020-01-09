@@ -25,7 +25,17 @@ TagManager:
   - spawner_middle_wall
   - middle_walls
   - spawner_stand
+  - bathroom
   - now
+  - now
+  - now
+  - now
+  - now
+  - now
+  - now
+  - zoo
+  - bedroom
+  - kitchen
   layers:
   - Default
   - TransparentFX

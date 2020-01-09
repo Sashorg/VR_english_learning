@@ -30,7 +30,7 @@ public class changescen : MonoBehaviour
                 }
                 //g.SetActive(false);
             }
-            SceneManager.LoadScene("tryout");
+            SceneManager.LoadScene("bathroom");
             
         }
 
