@@ -25,19 +25,17 @@ public class InteractableObject : MonoBehaviour
     private int error_per_word = 0;
     private ArrayList list_of_mistakes = new ArrayList { };
     private ArrayList time_of_one_guess = new ArrayList { };
-    private IEnumerator coroutine;
+
     //Delegates
     public delegate void GoodChoice();
     public static event GoodChoice goodChoice;
     public delegate void BadChoice();
     public static event BadChoice badChoice;
 
-    private Animation anim;
 
 
     void Start()
     {
-        anim = GetComponent<Animation>();
         // Gaze Timer logic
         imgGaze = GameObject.FindGameObjectWithTag("Gaze Image").GetComponent<Image>();
         imgGaze.fillAmount = 0;
@@ -75,19 +73,8 @@ public class InteractableObject : MonoBehaviour
         // Accept/Reject feedback logic
         if (_gvrTimer > _totalTime && _gazeComplete != true)
         {
-            if (gameObject.name == "door")
-            {
-                print("kek");
-                anim.Play("open");
-                coroutine = WaitAndPrint(0.8f);
-                StartCoroutine(coroutine);
-               
-            }
-            else
-            {
-                gazeCompleted();
-                _gazeComplete = true;
-            }
+            gazeCompleted();
+            _gazeComplete = true;
         }
 
     }
@@ -171,15 +158,7 @@ public class InteractableObject : MonoBehaviour
         _reject.enabled = false;
         badChoice();
     }
-    private IEnumerator WaitAndPrint(float waitTime)
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(waitTime);
-            SceneManager.LoadScene(gameObject.tag.ToString());
-            print("WaitAndPrint " + Time.time);
-        }
-    }
+
     IEnumerator rightChoice()
     {
         _accept.enabled = true;

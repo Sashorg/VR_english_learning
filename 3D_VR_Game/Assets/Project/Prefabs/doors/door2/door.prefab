@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 977282028120788406}
   - component: {fileID: 2839423284257002440}
-  - component: {fileID: 4695931054179993036}
-  - component: {fileID: 2216097627806897852}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -47,40 +45,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &4695931054179993036
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641153499045172046}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2e1fcd2a2e41e514ab14fafd8b28754d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &2216097627806897852
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641153499045172046}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1001 &6800953176992305590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88,6 +52,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 977282028120788406}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: a999e601923b3fe4ca0e071d60aabcb0,
+        type: 3}
+      propertyPath: m_Name
+      value: doors
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a999e601923b3fe4ca0e071d60aabcb0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -152,11 +121,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.181103
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: a999e601923b3fe4ca0e071d60aabcb0,
-        type: 3}
-      propertyPath: m_Name
-      value: doors
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a999e601923b3fe4ca0e071d60aabcb0, type: 3}
