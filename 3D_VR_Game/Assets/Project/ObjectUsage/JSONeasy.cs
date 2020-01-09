@@ -223,24 +223,32 @@ public class JSONeasy : MonoBehaviour
 
                     if (count_table == 0)
                     {
-                        if (amount_tables == 0) { 
+                        if (amount_tables == 0) {
+                            print("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+                         
                             table = ObjectPoolingManager.Instance.GetObject("table");
-                       
-                        if (count_floor >= spawner_floor.Length)
+                            amount_tables = amount_tables + 1;
+
+                            if (count_floor >= spawner_floor.Length)
                         {
+
                             reservedGO.SetActive(false);
                             table.transform.position = spawner_floor[count_floor - 1].gameObject.transform.position;
                             table.transform.rotation = spawner_floor[count_floor - 1].gameObject.transform.rotation;
-                            //goo.SetActive(false);
-                            // print(goo.name + "was dectivated");
+                                spawner_table = GameObject.FindGameObjectsWithTag("spawner_table");
+                                print(spawner_table.Length + "FFFFFFFFFFFFFFFFFFFDDDDDDDDDDDDF");
+                                //goo.SetActive(false);
+                                // print(goo.name + "was dectivated");
 
-                        }
+                            }
                         else
                         {
                             print("we here2");
                             table.transform.position = spawner_floor[count_floor].gameObject.transform.position;
                             table.transform.rotation = spawner_floor[count_floor].gameObject.transform.rotation;
-                            print(table.transform.position);
+                                spawner_table = GameObject.FindGameObjectsWithTag("spawner_table");
+                                print(spawner_table.Length + "FFFFFFFFFFFFFFFFFFFDDDDDDDDDDDDF");
+                                print(table.transform.position);
                             count_floor = count_floor + 1;
                         }
                     }
