@@ -6,7 +6,7 @@ using System.IO;
 public class JSONeasy : MonoBehaviour
 {
     ///objects.json, /objects_zoo.json 
-    public enum Level { objects, zooobjects , tryout};
+    public enum Level { objects, zooobjects , bath};
 
     public Level levels;
     private string choice;

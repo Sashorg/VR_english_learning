@@ -1,0 +1,262 @@
+fileFormatVersion: 2
+guid: 88ce33c0dc85142da931fea1141d3c62
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ____01_001
+    100002: ____01_002
+    100004: _____001
+    100006: _____002
+    100008: ______001
+    100010: ______002
+    100012: _______01_001
+    100014: _______02_001
+    100016: _______03_001
+    100018: _______04_001
+    100020: _______05_001
+    100022: _______06_001
+    100024: ________001
+    100026: bok01_001
+    100028: bok02_001
+    100030: bok_001
+    100032: Circle02_001
+    100034: Component#3_002
+    100036: Cylinder02_001
+    100038: dno_001
+    100040: kvadratik2_001
+    100042: Layer0_001
+    100044: Object02_001
+    100046: OilTank01_001
+    100048: OilTank02_001
+    100050: OilTank03_001
+    100052: OilTank04_001
+    100054: OilTank05_001
+    100056: OilTank06_001
+    100058: OilTank06_002
+    100060: OilTank07_001
+    100062: OilTank07_002
+    100064: OilTank09_001
+    100066: OilTank09_002
+    100068: OilTank09_003
+    100070: panel_2_001
+    100072: Rectangle0_001
+    100074: rezina_001
+    100076: ruchka_001
+    100078: Shape05_001
+    100080: Shape12_001
+    100082: transform362
+    100084: transform363
+    100086: transform364
+    100088: transform365
+    100090: transform366
+    100092: transform367
+    100094: transform368
+    100096: transform369
+    100098: transform370
+    100100: transform371
+    100102: transform372
+    100104: transform373
+    100106: transform374
+    100108: transform375
+    100110: transform376
+    100112: transform377
+    100114: transform378
+    100116: transform379
+    100118: transform380
+    100120: transform381
+    100122: transform382
+    100124: transform383
+    100126: transform384
+    100128: transform385
+    100130: transform386
+    100132: transform387
+    100134: transform388
+    100136: transform389
+    100138: transform390
+    100140: transform391
+    100142: transform392
+    100144: transform393
+    100146: transform394
+    100148: transform395
+    100150: transform396
+    100152: Tube01_001
+    100154: Tube02_001
+    100156: verh_001
+    100158: //RootNode
+    400000: ____01_001
+    400002: ____01_002
+    400004: _____001
+    400006: _____002
+    400008: ______001
+    400010: ______002
+    400012: _______01_001
+    400014: _______02_001
+    400016: _______03_001
+    400018: _______04_001
+    400020: _______05_001
+    400022: _______06_001
+    400024: ________001
+    400026: bok01_001
+    400028: bok02_001
+    400030: bok_001
+    400032: Circle02_001
+    400034: Component#3_002
+    400036: Cylinder02_001
+    400038: dno_001
+    400040: kvadratik2_001
+    400042: Layer0_001
+    400044: Object02_001
+    400046: OilTank01_001
+    400048: OilTank02_001
+    400050: OilTank03_001
+    400052: OilTank04_001
+    400054: OilTank05_001
+    400056: OilTank06_001
+    400058: OilTank06_002
+    400060: OilTank07_001
+    400062: OilTank07_002
+    400064: OilTank09_001
+    400066: OilTank09_002
+    400068: OilTank09_003
+    400070: panel_2_001
+    400072: Rectangle0_001
+    400074: rezina_001
+    400076: ruchka_001
+    400078: Shape05_001
+    400080: Shape12_001
+    400082: transform362
+    400084: transform363
+    400086: transform364
+    400088: transform365
+    400090: transform366
+    400092: transform367
+    400094: transform368
+    400096: transform369
+    400098: transform370
+    400100: transform371
+    400102: transform372
+    400104: transform373
+    400106: transform374
+    400108: transform375
+    400110: transform376
+    400112: transform377
+    400114: transform378
+    400116: transform379
+    400118: transform380
+    400120: transform381
+    400122: transform382
+    400124: transform383
+    400126: transform384
+    400128: transform385
+    400130: transform386
+    400132: transform387
+    400134: transform388
+    400136: transform389
+    400138: transform390
+    400140: transform391
+    400142: transform392
+    400144: transform393
+    400146: transform394
+    400148: transform395
+    400150: transform396
+    400152: Tube01_001
+    400154: Tube02_001
+    400156: verh_001
+    400158: //RootNode
+    2100000: Skalbimo masinos plastikas matinis1
+    2100002: Skalbimo masinos plastikas lygus1
+    2100004: Stiklas skalbenkes1
+    2100006: Skalbenkes cromas1
+    2100008: Duru spalava1
+    2100010: Lemputes1
+    2100012: Stiklas lempuciu1
+    2300000: OilTank09_003
+    3300000: OilTank09_003
+    4300000: OilTank09_003
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -53,7 +53,20 @@ public class GameManager : MonoBehaviour
     public GameObject rabbit;
     public GameObject rhino;
     public GameObject squirrel;
-
+    //Bath
+    public GameObject socket;
+    public GameObject towel_rail;
+    public GameObject flush;
+    public GameObject soup;
+    public GameObject toilet;
+    public GameObject toilet_paper;
+    public GameObject shower;
+    public GameObject toilet_brush;
+    public GameObject vase;
+    public GameObject towel;
+    public GameObject sink;
+    public GameObject shower_gel;
+    public GameObject toothbrush;
 
     public GameObject VRglasses;
     public GameObject ant_pants;
@@ -137,7 +150,20 @@ public class GameManager : MonoBehaviour
         ObjectPoolingManager.Instance.CreatePool(rhino, 6, 10);
         ObjectPoolingManager.Instance.CreatePool(squirrel, 6, 10);
 
-        
+        //BATH OBJECTS
+        ObjectPoolingManager.Instance.CreatePool(flush, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(socket, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(towel_rail, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(soup, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(toilet, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(toilet_brush, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(toilet_paper, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(shower, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(vase, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(shower_gel, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(towel, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(sink, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(toothbrush, 6, 10);
     }
 
 }
