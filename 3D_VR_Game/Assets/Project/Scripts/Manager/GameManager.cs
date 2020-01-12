@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if (SettingsManager.gameMode == "Learning")
+        if (SettingsManager.trainOrLearn == "Learning")
         {
             _object = GameObject.Find("UI_Object");
             _score = GameObject.Find("UI_Score");

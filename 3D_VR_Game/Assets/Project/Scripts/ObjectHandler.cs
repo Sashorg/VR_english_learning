@@ -26,7 +26,7 @@ public class ObjectHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(SettingsManager.gameMode == "Training" && SettingsManager.room == "Apartament" && !SettingsManager.appartamentOngoing){
+        if(SettingsManager.trainOrLearn == "Training" && SettingsManager.room == "Apartment" && !SettingsManager.appartamentOngoing){
             obj = new ArrayList { };
             AppartRooms = new ArrayList();
             passed = 0;
@@ -34,7 +34,7 @@ public class ObjectHandler : MonoBehaviour
             AppartRooms.Add("objects");
         }
 
-        if(SettingsManager.gameMode == "Training" && SettingsManager.room != "Apartament")
+        if(SettingsManager.trainOrLearn == "Training" && SettingsManager.room != "Apartment")
         {
             obj = new ArrayList { };
             passed = 0;
@@ -46,7 +46,7 @@ public class ObjectHandler : MonoBehaviour
 
     private void Update()
     {
-        if(SettingsManager.gameMode == "Training" && SettingsManager.room == "Apartament" && !SettingsManager.appartamentOngoing){
+        if(SettingsManager.trainOrLearn == "Training" && SettingsManager.room == "Apartment" && !SettingsManager.appartamentOngoing){
             if (!f)
             {
                 SettingsManager.appartamentOngoing = true;
@@ -55,7 +55,7 @@ public class ObjectHandler : MonoBehaviour
             }
         }
 
-        if(SettingsManager.gameMode == "Training" && SettingsManager.room == "Apartament" && SettingsManager.appartamentOngoing){
+        if(SettingsManager.trainOrLearn == "Training" && SettingsManager.room == "Apartment" && SettingsManager.appartamentOngoing){
             if (!f)
             {
                 f = true;
@@ -66,7 +66,7 @@ public class ObjectHandler : MonoBehaviour
             }
         }
 
-        if (SettingsManager.gameMode == "Training" && SettingsManager.room != "Apartament")
+        if (SettingsManager.trainOrLearn == "Training" && SettingsManager.room != "Apartment")
         {
             if (!f)
             {

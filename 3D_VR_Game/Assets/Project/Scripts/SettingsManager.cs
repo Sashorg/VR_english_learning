@@ -4,9 +4,9 @@ using UnityEngine;
 
 public static class SettingsManager 
 {
-    public static string gameType = "";
-    public static string room = "Apartament";
-    public static string gameMode = "Training";
+    public static string phonOrVoc = "";
+    public static string room = "Apartment";
+    public static string trainOrLearn = "Training";
     public static string difficulty = "";
 
     public static bool appartamentOngoing = false;

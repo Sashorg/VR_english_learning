@@ -47,6 +47,11 @@ public class InteractableObject : MonoBehaviour
 
     void Start()
     {
+        if (gameObject.name == "door" && SettingsManager.room != "Apartment")
+        {
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            this.enabled = false;
+        }
         anim = GetComponent<Animation>();
         // Gaze Timer logic
         imgGaze = GameObject.FindGameObjectWithTag("Gaze Image").GetComponent<Image>();
@@ -125,7 +130,7 @@ public class InteractableObject : MonoBehaviour
     public void gazeCompleted()
     {
         _gazedObjectName = gameObject.name;
-        if (SettingsManager.gameType == "Phonetics")
+        if (SettingsManager.phonOrVoc == "Phonetics")
         {
             _targetObjectName = Phonetics_Object_handler.objectToShow;
             if (_gazedObjectName == _targetObjectName)
@@ -137,7 +142,7 @@ public class InteractableObject : MonoBehaviour
                 StartCoroutine(wrongChoice());
             }
         }
-        else if (SettingsManager.gameMode == "Training")
+        else if (SettingsManager.trainOrLearn == "Training")
         {
             _targetObjectName = ObjectHandler.objectToShow;
             if (_gazedObjectName == _targetObjectName + "(Clone)")
@@ -161,7 +166,7 @@ public class InteractableObject : MonoBehaviour
                 _reject.enabled = true;
             }
         }
-        else if (SettingsManager.gameMode == "Learning")
+        else if (SettingsManager.trainOrLearn == "Learning")
         {
             _objectText.text = gameObject.transform.parent.root.name;
             AudioManager.Instance.ObjectSound(gameObject.transform.parent.root.name);

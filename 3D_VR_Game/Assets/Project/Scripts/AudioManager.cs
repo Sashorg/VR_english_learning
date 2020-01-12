@@ -6,34 +6,49 @@ public class AudioManager : Singleton<AudioManager>
 {
     public AudioSource SoundEffect;
 
-    public AudioClip[] objectClips;
+    public AudioClip[] bedroomClips;
     public AudioClip[] zooClips;
+    public AudioClip[] bathroomClips;
+    public AudioClip[] kitchenClips;
     public AudioClip[] phoneticsClips;
 
     public void ObjectSound(string Object) 
     {
-        foreach(AudioClip clip in objectClips)
+        if(SettingsManager.room == "Bedroom" || SettingsManager.room == "Apartment")
         {
-            print(clip.name);
-            if(Object == clip.name)
-            {
-                print("Played");
-                SoundEffect.PlayOneShot(clip);
-            }
-                
+            foreach (AudioClip clip in bedroomClips)
+                if (Object == clip.name)
+                    SoundEffect.PlayOneShot(clip);
         }
 
-        foreach (AudioClip clip in zooClips)
+        if (SettingsManager.room == "Kitchen" || SettingsManager.room == "Apartment")
         {
-            if (Object == clip.name)
-                SoundEffect.PlayOneShot(clip);
+            foreach (AudioClip clip in kitchenClips)
+                if (Object == clip.name)
+                    SoundEffect.PlayOneShot(clip);
         }
 
-        foreach (AudioClip clip in phoneticsClips)
+        if (SettingsManager.room == "Bathroom" || SettingsManager.room == "Apartment")
         {
-            if (Object == clip.name)
-                SoundEffect.PlayOneShot(clip);
+            foreach (AudioClip clip in bathroomClips)
+                if (Object == clip.name)
+                    SoundEffect.PlayOneShot(clip);
         }
+
+        if (SettingsManager.room == "Zoo")
+        {
+            foreach (AudioClip clip in zooClips)
+                if (Object == clip.name)
+                    SoundEffect.PlayOneShot(clip);
+        }
+
+        if (SettingsManager.phonOrVoc == "Phonetics")
+        {
+            foreach (AudioClip clip in phoneticsClips)
+                if (Object == clip.name)
+                    SoundEffect.PlayOneShot(clip);
+        }
+
 
     }
 

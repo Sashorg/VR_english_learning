@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -9,16 +10,16 @@ public class MenuManager : MonoBehaviour
     private GameObject _initialScreen, _levelSelection;
 
     [SerializeField]
-    private Text _gameModeText, _roomText, _gameTypeText, _difficultyText;
+    private Text _phonOrVocText, _roomText, _gameTypeText, _difficultyText;
 
     [SerializeField]
     private Dropdown _gameModeDropdown, _roomDropdown, _gameTypeDropdown, _difficultyDropdown;
 
     private void Start()
     {
-        SettingsManager.gameMode = _gameModeText.text;
+        SettingsManager.phonOrVoc = _phonOrVocText.text;
         SettingsManager.room = _roomText.text;
-        SettingsManager.gameType = _gameTypeText.text;
+        SettingsManager.trainOrLearn = _gameTypeText.text;
         SettingsManager.difficulty = _difficultyText.text;
     }
 
@@ -35,26 +36,26 @@ public class MenuManager : MonoBehaviour
 
     public void onGameModeChange(int mode)
     {
-        SettingsManager.gameMode = _gameModeText.text;
+        SettingsManager.phonOrVoc = _phonOrVocText.text;
 
-        if(_gameModeText.text == "Phonetics")
+        if(_phonOrVocText.text == "Phonetics")
         {
             _roomDropdown.interactable = false;
             _roomText.text = "Phonetics Room";
             SettingsManager.room = "Phonetics Room";
             _gameTypeDropdown.interactable = false;
             _gameTypeText.text = "Training";
-            SettingsManager.gameType = "Training";
+            SettingsManager.trainOrLearn = "Training";
         }
 
-        if (_gameModeText.text == "Vocabulary")
+        if (_phonOrVocText.text == "Vocabulary")
         {
             _roomDropdown.interactable = true;
             _roomText.text = "Bedroom";
             SettingsManager.room = "Bedroom";
             _gameTypeDropdown.interactable = true;
             _gameTypeText.text = "Training";
-            SettingsManager.gameType = "Training";
+            SettingsManager.trainOrLearn = "Training";
         }
     }
 
@@ -65,7 +66,7 @@ public class MenuManager : MonoBehaviour
 
     public void onGameTypeChange(int mode)
     {
-        SettingsManager.gameType = _gameTypeText.text;
+        SettingsManager.trainOrLearn = _gameTypeText.text;
     }
 
     public void onDifficultyChange(int mode)
@@ -75,10 +76,20 @@ public class MenuManager : MonoBehaviour
 
     public void onClickStart()
     {
-        //Load Right Scene depending on SettingsManager configuration
-        print("Game Mode: " + SettingsManager.gameMode);
-        print("Room: " + SettingsManager.room);
-        print("Game Type: " + SettingsManager.gameType);
-        print("Difficulty: " + SettingsManager.difficulty);
+        if (SettingsManager.phonOrVoc == "Phonetics")
+            SceneManager.LoadScene("phonetics");
+        else
+        {
+            if(SettingsManager.room == "Apartment")
+                SceneManager.LoadScene("bedroom");
+            if(SettingsManager.room == "Bedroom")
+                SceneManager.LoadScene("bedroom");
+            if (SettingsManager.room == "Kitchen")
+                SceneManager.LoadScene("kitchen");
+            if (SettingsManager.room == "Zoo")
+                SceneManager.LoadScene("zoo");
+            if (SettingsManager.room == "Bathroom")
+                SceneManager.LoadScene("bathroom");
+        }
     }
 }

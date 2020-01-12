@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StatisticsManager : MonoBehaviour
+public class StatisticsManager : Singleton<StatisticsManager>
 {
     private static float _totalTimer = 0f;
     private static int _mistakes = 0;
     private static bool _count = false;
-    private static string _wrongWords = "";
     private static IDictionary<string, int> wrongWordCounter;
 
     void Start()
