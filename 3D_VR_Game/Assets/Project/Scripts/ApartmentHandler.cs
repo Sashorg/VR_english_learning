@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class ApartamentHandler
+public static class ApartmentHandler
 {
     public static int passed = 0;
     public static int full = 0;

@@ -26,7 +26,7 @@ public class ObjectHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(SettingsManager.trainOrLearn == "Training" && SettingsManager.room == "Apartment" && !SettingsManager.appartamentOngoing){
+        if(SettingsManager.trainOrLearn == "Training" && SettingsManager.room == "Apartment" && !SettingsManager.apartmentOngoing){
             obj = new ArrayList { };
             AppartRooms = new ArrayList();
             passed = 0;
@@ -46,22 +46,22 @@ public class ObjectHandler : MonoBehaviour
 
     private void Update()
     {
-        if(SettingsManager.trainOrLearn == "Training" && SettingsManager.room == "Apartment" && !SettingsManager.appartamentOngoing){
+        if(SettingsManager.trainOrLearn == "Training" && SettingsManager.room == "Apartment" && !SettingsManager.apartmentOngoing){
             if (!f)
             {
-                SettingsManager.appartamentOngoing = true;
+                SettingsManager.apartmentOngoing = true;
                 f = true;
                 SetupApartament();
             }
         }
 
-        if(SettingsManager.trainOrLearn == "Training" && SettingsManager.room == "Apartment" && SettingsManager.appartamentOngoing){
+        if(SettingsManager.trainOrLearn == "Training" && SettingsManager.room == "Apartment" && SettingsManager.apartmentOngoing){
             if (!f)
             {
                 f = true;
-                full = ApartamentHandler.full;
-                passed = ApartamentHandler.passed;
-                obj = ApartamentHandler.obj;
+                full = ApartmentHandler.full;
+                passed = ApartmentHandler.passed;
+                obj = ApartmentHandler.obj;
                 SetupUIApartament();
             }
         }
@@ -115,9 +115,6 @@ public class ObjectHandler : MonoBehaviour
             #if (UNITY_EDITOR)
             path = Application.streamingAssetsPath + choice;
             #endif
-
-            print(path);
-
             Objectss easyy = JsonUtility.FromJson<Objectss>(File.ReadAllText(path));
 
             if(SettingsManager.difficulty == "Easy"){
@@ -134,9 +131,8 @@ public class ObjectHandler : MonoBehaviour
         }
         obj = ShuffleList(obj);
         full = obj.Count;
-
-        ApartamentHandler.obj = obj;
-        ApartamentHandler.full = full;
+        ApartmentHandler.obj = obj;
+        ApartmentHandler.full = full;
         SetupUI();
     }
 
@@ -148,18 +144,18 @@ public class ObjectHandler : MonoBehaviour
         // change this to "you need to find a "GameObject"  
         AudioManager.Instance.ObjectSound(objectToShow);
         obj.RemoveAt(numObject);
-        if( SettingsManager.room == "Apartament"){
-            ApartamentHandler.passed = passed;
-            ApartamentHandler.full = full;
-            ApartamentHandler.obj = obj;
-            ApartamentHandler.toShow = objectToShow;
+        if( SettingsManager.room == "Apartment"){
+            ApartmentHandler.passed = passed;
+            ApartmentHandler.full = full;
+            ApartmentHandler.obj = obj;
+            ApartmentHandler.toShow = objectToShow;
         }
     }
    
    public static void SetupUIApartament(){
-        objectToShow = ApartamentHandler.toShow;
-        passed = ApartamentHandler.passed;
-        full = ApartamentHandler.full;
+        objectToShow = ApartmentHandler.toShow;
+        passed = ApartmentHandler.passed;
+        full = ApartmentHandler.full;
         GameObject.Find("UI_Object").GetComponent<Text>().text = objectToShow;
         GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
    }
@@ -186,10 +182,10 @@ public class ObjectHandler : MonoBehaviour
             obj.RemoveAt(numObject);
             
             if( SettingsManager.room == "Apartament"){
-                ApartamentHandler.passed = passed;
-                ApartamentHandler.full = full;
-                ApartamentHandler.obj = obj;
-                ApartamentHandler.toShow = objectToShow;
+                ApartmentHandler.passed = passed;
+                ApartmentHandler.full = full;
+                ApartmentHandler.obj = obj;
+                ApartmentHandler.toShow = objectToShow;
             }
         }
 
