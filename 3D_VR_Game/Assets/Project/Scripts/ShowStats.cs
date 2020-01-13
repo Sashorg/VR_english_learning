@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShowStats : MonoBehaviour
 {
@@ -22,5 +23,13 @@ public class ShowStats : MonoBehaviour
         }
         else
             mistakesPerWord.text = "None";
+    }
+
+    public void pressedBackToMenu()
+    {
+        StatisticsManager._mistakes = 0;
+        StatisticsManager._totalTimer = 0;
+        StatisticsManager.wrongWordCounter = new Dictionary<string, int>();
+        SceneManager.LoadScene("Menu");
     }
 }
