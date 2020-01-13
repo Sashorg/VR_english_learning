@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;
 
 public class MenuManager : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class MenuManager : MonoBehaviour
         SettingsManager.room = _roomText.text;
         SettingsManager.trainOrLearn = _gameTypeText.text;
         SettingsManager.difficulty = _difficultyText.text;
+        XRSettings.LoadDeviceByName("");
+        XRSettings.enabled = false;
+        
     }
 
     public void onClickPlay()
