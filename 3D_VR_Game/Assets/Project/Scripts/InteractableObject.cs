@@ -129,7 +129,7 @@ public class InteractableObject : MonoBehaviour
 
     public void gazeCompleted()
     {
-        _gazedObjectName = gameObject.name;
+        _gazedObjectName = gameObject.transform.parent.root.name;
         if (SettingsManager.phonOrVoc == "Phonetics")
         {
             _targetObjectName = Phonetics_Object_handler.objectToShow;
@@ -145,7 +145,7 @@ public class InteractableObject : MonoBehaviour
         else if (SettingsManager.trainOrLearn == "Training")
         {
             _targetObjectName = ObjectHandler.objectToShow;
-            if (_gazedObjectName == _targetObjectName + "(Clone)")
+            if (_gazedObjectName == _targetObjectName)
             //if (_gazedObjectName == _targetObjectName)
             {
                 // Accept/Reject feedback logic

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1255,6 +1255,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &645276868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 645276870}
+  - component: {fileID: 645276869}
+  m_Layer: 0
+  m_Name: Statistics Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &645276869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645276868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47042155c4af9a43a2ad5e06ab925ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &645276870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645276868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.501793, y: 2.63005, z: 0.41554272}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &673089235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2507,7 +2550,7 @@ MonoBehaviour:
   toilet_brush: {fileID: 2700553936074987319, guid: abfe8366c9ddfdc4c9b34484ddf2f167,
     type: 3}
   vase: {fileID: 3641205968485002103, guid: bac436de52a54f44fa9a3b402b0a5ff2, type: 3}
-  towel: {fileID: 5177002238237580371, guid: 991402c1d03f60f4e9191abce213e564, type: 3}
+  towel: {fileID: 5177002238237580371, guid: 392e85ac7f5912442a78bd9a45a58ba9, type: 3}
   sink: {fileID: 727728799237261467, guid: e686ffb99550e9146ad7e722441badb8, type: 3}
   shower_gel: {fileID: 1251811999224628053, guid: 0037e1112c8b6eb42be2189bcb3c8a4f,
     type: 3}
@@ -10367,7 +10410,7 @@ GameObject:
   - component: {fileID: 692094692560534640}
   - component: {fileID: 3036357293468953934}
   m_Layer: 0
-  m_Name: glass2
+  m_Name: g2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13175,7 +13218,7 @@ GameObject:
   - component: {fileID: 6436843177662491175}
   - component: {fileID: 8237993094049643405}
   m_Layer: 0
-  m_Name: glass
+  m_Name: g
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

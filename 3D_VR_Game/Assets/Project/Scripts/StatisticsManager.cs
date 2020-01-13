@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StatisticsManager : Singleton<StatisticsManager>
 {
-    private static float _totalTimer = 0f;
-    private static int _mistakes = 0;
+    public static float _totalTimer = 0f;
+    public static int _mistakes = 0;
     private static bool _count = false;
-    private static IDictionary<string, int> wrongWordCounter;
+    public static IDictionary<string, int> wrongWordCounter;
+    private static IEnumerator _coroutine;
 
     void Start()
     {
@@ -47,12 +50,17 @@ public class StatisticsManager : Singleton<StatisticsManager>
 
     public static void gameOver()
     {
-        Debug.Log("Total Time: " + _totalTimer);
-        Debug.Log("Mistakes: " + _mistakes);
-        foreach (KeyValuePair<string, int> kvp in wrongWordCounter)
+        GameObject[] go = changescen.GetDontDestroyOnLoadObjects();
+        foreach (GameObject g in go)
         {
-            print(kvp.Key + " = " + kvp.Value);
+            print(g.name);
+            for (int i = 0; i < g.transform.childCount; i++)
+            {
+                g.transform.GetChild(i).gameObject.SetActive(false);
+            }
+            //g.SetActive(false);
         }
+        SceneManager.LoadScene("Statistics");
     }
 
 }
