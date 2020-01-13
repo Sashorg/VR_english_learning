@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: c284d836d37164250885af1cabfe2e54
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Interior_Drawner
+    100002: Interior_Drawner 1
+    100004: Interior_IceMaker
+    100006: Interior_Light_Left
+    100008: Interior_Light_Right
+    100010: Interior_Light_Top
+    100012: Interior_Shelves
+    100014: Interior_Support
+    100016: Left_Door
+    100018: Left_Door_Handle
+    100020: Left_Door_Hinge
+    100022: Left_Door_Shelves
+    100024: Left_Door_Support
+    100026: Refregerator
+    100028: Refregerator_Handle
+    100030: Refregerator_Support
+    100032: Right_Door
+    100034: Right_Door_Handle
+    100036: Right_Door_Hinge
+    100038: Right_Door_Shelves
+    100040: Right_Door_Support
+    100042: //RootNode
+    400000: Interior_Drawner
+    400002: Interior_Drawner 1
+    400004: Interior_IceMaker
+    400006: Interior_Light_Left
+    400008: Interior_Light_Right
+    400010: Interior_Light_Top
+    400012: Interior_Shelves
+    400014: Interior_Support
+    400016: Left_Door
+    400018: Left_Door_Handle
+    400020: Left_Door_Hinge
+    400022: Left_Door_Shelves
+    400024: Left_Door_Support
+    400026: Refregerator
+    400028: Refregerator_Handle
+    400030: Refregerator_Support
+    400032: Right_Door
+    400034: Right_Door_Handle
+    400036: Right_Door_Hinge
+    400038: Right_Door_Shelves
+    400040: Right_Door_Support
+    400042: //RootNode
+    2100000: Samsung_Fridge
+    2300000: Interior_Drawner
+    2300002: Interior_Drawner 1
+    2300004: Interior_IceMaker
+    2300006: Interior_Light_Left
+    2300008: Interior_Light_Right
+    2300010: Interior_Light_Top
+    2300012: Interior_Shelves
+    2300014: Interior_Support
+    2300016: Left_Door
+    2300018: Left_Door_Handle
+    2300020: Left_Door_Hinge
+    2300022: Left_Door_Shelves
+    2300024: Left_Door_Support
+    2300026: Refregerator
+    2300028: Refregerator_Handle
+    2300030: Refregerator_Support
+    2300032: Right_Door
+    2300034: Right_Door_Handle
+    2300036: Right_Door_Hinge
+    2300038: Right_Door_Shelves
+    2300040: Right_Door_Support
+    2300042: //RootNode
+    3300000: Interior_Drawner
+    3300002: Interior_Drawner 1
+    3300004: Interior_IceMaker
+    3300006: Interior_Light_Left
+    3300008: Interior_Light_Right
+    3300010: Interior_Light_Top
+    3300012: Interior_Shelves
+    3300014: Interior_Support
+    3300016: Left_Door
+    3300018: Left_Door_Handle
+    3300020: Left_Door_Hinge
+    3300022: Left_Door_Shelves
+    3300024: Left_Door_Support
+    3300026: Refregerator
+    3300028: Refregerator_Handle
+    3300030: Refregerator_Support
+    3300032: Right_Door
+    3300034: Right_Door_Handle
+    3300036: Right_Door_Hinge
+    3300038: Right_Door_Shelves
+    3300040: Right_Door_Support
+    3300042: //RootNode
+    4300000: Body
+    4300002: Interior_Support
+    4300004: Interior_Drawner
+    4300006: Interior_Shelves
+    4300008: Interior_IceMaker
+    4300010: Left_Door_Support
+    4300012: Right_Door_Support
+    4300014: Refregerator
+    4300016: Refregerator_Support
+    4300018: Refregerator_Handle
+    4300020: Left_Door
+    4300022: Left_Door_Hinge
+    4300024: Left_Door_Handle
+    4300026: Left_Door_Shelves
+    4300028: Right_Door
+    4300030: Right_Door_Shelves
+    4300032: Right_Door_Hinge
+    4300034: Right_Door_Handle
+    4300036: Interior_Light_Top
+    4300038: Interior_Light_Left
+    4300040: Interior_Light_Right
+    4300042: Interior_Drawner
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

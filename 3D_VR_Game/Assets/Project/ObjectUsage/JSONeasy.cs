@@ -6,7 +6,7 @@ using System.IO;
 public class JSONeasy : MonoBehaviour
 {
     ///objects.json, /objects_zoo.json 
-    public enum Level { objects, zooobjects , bath};
+    public enum Level { objects, zooobjects , bath,kitchen};
 
     public Level levels;
     private string choice;
@@ -68,11 +68,11 @@ public class JSONeasy : MonoBehaviour
        
         jsonString = File.ReadAllText(path);
         Objectss easyy = JsonUtility.FromJson<Objectss>(jsonString);
-        if (level == "Easy")
+        if (SettingsManager.difficulty == "Easy")
         {
             objlist = easyy.level_easy;
         }
-        else if (level == "Medium")
+        else if (SettingsManager.difficulty == "Medium")
         {
             objlist = easyy.level_medium;
         }

@@ -75,6 +75,30 @@ public class GameManager : MonoBehaviour
     public GameObject eight_gate;
     public GameObject pin_bin;
     public GameObject tey_key;
+    //Kitchen
+    public GameObject apples;
+    public GameObject bowl;
+    public GameObject candies;
+    public GameObject cardboard_box;
+    public GameObject coffee_grinder;
+    public GameObject cooking_spoon;
+    public GameObject cooking_shovel;
+    public GameObject cup;
+    public GameObject fork;
+    public GameObject glass;
+    public GameObject jar;
+    public GameObject kettle;
+    public GameObject kitchen_sink;
+
+    public GameObject knife;
+    public GameObject oven;
+    public GameObject pan;
+    public GameObject plate;
+    public GameObject spoon;
+    public GameObject stove;
+    public GameObject teapot;
+    public GameObject teaspoon;
+    public GameObject wine;
 
     //Learning Mode
     private GameObject _object, _score, _find;
@@ -164,6 +188,30 @@ public class GameManager : MonoBehaviour
         ObjectPoolingManager.Instance.CreatePool(towel, 6, 10);
         ObjectPoolingManager.Instance.CreatePool(sink, 6, 10);
         ObjectPoolingManager.Instance.CreatePool(toothbrush, 6, 10);
+        //KITCHEN OBJECTS
+        ObjectPoolingManager.Instance.CreatePool(apples, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(bowl, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(candies, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(cardboard_box, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(coffee_grinder, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(cooking_shovel, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(cooking_spoon, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(cup, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(fork, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(glass, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(jar, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(kettle, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(kitchen_sink, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(knife, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(oven, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(pan, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(plate, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(spoon, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(stove, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(teapot, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(teaspoon, 6, 10);
+        ObjectPoolingManager.Instance.CreatePool(wine, 6, 10);
+
     }
 
 }

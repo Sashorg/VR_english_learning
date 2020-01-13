@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7454490709765634201}
   - component: {fileID: 7454490709765634200}
   m_Layer: 0
-  m_Name: towel
+  m_Name: twl
   m_TagString: middle_walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 147a1229072e54cbdbabfa19058346b1, type: 2}
+  - {fileID: 2100000, guid: 1c0d4d8e7691244f5a5c1a5d8c441076, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
