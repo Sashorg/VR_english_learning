@@ -32,6 +32,7 @@ public class ObjectHandler : MonoBehaviour
             passed = 0;
             AppartRooms.Add("bath");
             AppartRooms.Add("objects");
+            AppartRooms.Add("kitchen");
         }
 
         if(SettingsManager.trainOrLearn == "Training" && SettingsManager.room != "Apartment")
@@ -181,7 +182,7 @@ public class ObjectHandler : MonoBehaviour
             GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
             obj.RemoveAt(numObject);
             
-            if( SettingsManager.room == "Apartament"){
+            if( SettingsManager.room == "Apartment"){
                 ApartmentHandler.passed = passed;
                 ApartmentHandler.full = full;
                 ApartmentHandler.obj = obj;
