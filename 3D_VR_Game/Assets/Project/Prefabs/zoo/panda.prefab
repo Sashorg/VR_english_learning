@@ -463,6 +463,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _object: {fileID: 0}
+  _score: {fileID: 0}
+  _find: {fileID: 0}
+  _objectText: {fileID: 0}
 --- !u!65 &-6569959373691014115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -806,7 +810,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 897c3b1b99682a44e81ee0071b61213a, type: 3}
+  - {fileID: 2100000, guid: 39df775c5522f714cbd689c604e680c9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
