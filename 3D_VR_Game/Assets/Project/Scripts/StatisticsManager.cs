@@ -14,6 +14,7 @@ public class StatisticsManager : Singleton<StatisticsManager>
 
     void Start()
     {
+        SettingsManager.apartmentOngoing = false;
         wrongWordCounter = new Dictionary<string, int>();
     }
 
