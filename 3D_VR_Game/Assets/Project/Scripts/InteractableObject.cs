@@ -179,6 +179,8 @@ public class InteractableObject : MonoBehaviour
     IEnumerator wrongChoice()
     {
         _reject.enabled = true;
+        StatisticsManager.countMistake();
+        StatisticsManager.countWordMistake(gameObject.name);
         yield return new WaitForSeconds(0.5f);
         _reject.enabled = false;
         badChoice();
