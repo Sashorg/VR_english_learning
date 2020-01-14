@@ -129,7 +129,10 @@ public class InteractableObject : MonoBehaviour
 
     public void gazeCompleted()
     {
-        _gazedObjectName = gameObject.transform.parent.root.name;
+        if(SettingsManager.phonOrVoc == "Vocabulary")
+            _gazedObjectName = gameObject.transform.parent.root.name;
+        else
+            _gazedObjectName = gameObject.name;
         if (SettingsManager.phonOrVoc == "Phonetics")
         {
             _targetObjectName = Phonetics_Object_handler.objectToShow;
