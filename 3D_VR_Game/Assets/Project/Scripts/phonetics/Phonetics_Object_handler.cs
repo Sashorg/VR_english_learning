@@ -37,6 +37,7 @@ public class Phonetics_Object_handler : MonoBehaviour
             AudioManager.Instance.ObjectSound(objectToShow);
             GameObject.Find("UI_Object").GetComponent<Text>().text = objectToShow;
             GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
+
         }
         else
         {
@@ -44,6 +45,8 @@ public class Phonetics_Object_handler : MonoBehaviour
             GameObject.Find("UI_find").GetComponent<Text>().text = "";
             GameObject.Find("UI_Object").GetComponent<Text>().text = "Congratulations!";
             GameObject.Find("UI_Score").GetComponent<Text>().text = passed + "/" + full;
+            passed = -1;
+            full=0;
             StatisticsManager.stopTimer();
             StatisticsManager.gameOver();
             //SceneManager.LoadScene(0);
