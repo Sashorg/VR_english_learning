@@ -1,10 +1,10 @@
 {
 
-"level_easy" : ["squirrel","chameleon","squirrel","chameleon","squirrel","chameleon","squirrel","chameleon"],
+"level_easy" : ["bear","dog","chicken","deer","crab"],
 
-"level_medium" : ["bird","butterfly","bird","butterfly","chameleon","squirrel"],
+"level_medium" : ["bear","dog","chicken","rhino","camel","deer","crab"],
 
-"level_hard" : ["squirrel","chameleon","squirrel","chameleon","squirrel","chameleon","squirrel","chameleon","bear","bear","dog","chicken","rhino","camel","deer","crab","butterfly","butterfly","butterfly","butterfly"]
+"level_hard" : ["chameleon","squirrel","bear","dog","chicken","rhino","camel","deer","crab","butterfly"]
 
 
 

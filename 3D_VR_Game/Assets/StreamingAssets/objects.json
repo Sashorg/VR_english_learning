@@ -1,10 +1,10 @@
 {
 
-"level_easy" : ["chair","chair","clock","mouse","fan","bed","PC","mug","photo","lamp","closet"],
+"level_easy" : ["chair","clock","bed","photo","lamp"],
 
-"level_medium" : ["chair","chair"],
+"level_medium" : ["chair","clock","bed","PC","photo","lamp","closet"],
 
-"level_hard" : ["mouse","fan","bed","PC","bed","lamp","closet"]
+"level_hard" : ["chair","clock","mouse","fan","bed","PC","mug","photo","lamp","closet"]
 
 
 

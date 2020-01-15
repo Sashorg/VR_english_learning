@@ -1,8 +1,8 @@
 {
 
-"level_easy" : ["chair","chair","clock","mouse","fan","bed","PC","mug","photo","lamp","closet"],
+"level_easy" : ["wine","kitchen sink","spoon","knife","glass","fork","candies"],
 
-"level_medium" : ["chair","chair"],
+"level_medium" : ["wine","oven","stove","kitchen sink","spoon","knife","glass","fork","candies"],
 
 "level_hard" : ["wine","jar","oven","stove","kitchen sink","spoon","teaspoon","cooking spoon","cardboard box","knife","glass","fork","candies"]
 
