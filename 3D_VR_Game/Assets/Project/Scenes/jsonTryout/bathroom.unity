@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -649,7 +649,7 @@ MonoBehaviour:
   toilet_brush: {fileID: 2700553936074987319, guid: abfe8366c9ddfdc4c9b34484ddf2f167,
     type: 3}
   vase: {fileID: 3641205968485002103, guid: bac436de52a54f44fa9a3b402b0a5ff2, type: 3}
-  towel: {fileID: 5177002238237580371, guid: 392e85ac7f5912442a78bd9a45a58ba9, type: 3}
+  towel: {fileID: 5177002238237580371, guid: 991402c1d03f60f4e9191abce213e564, type: 3}
   sink: {fileID: 727728799237261467, guid: e686ffb99550e9146ad7e722441badb8, type: 3}
   shower_gel: {fileID: 1251811999224628053, guid: 0037e1112c8b6eb42be2189bcb3c8a4f,
     type: 3}
