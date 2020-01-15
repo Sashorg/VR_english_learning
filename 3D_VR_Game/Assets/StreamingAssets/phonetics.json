@@ -1,7 +1,7 @@
 {
-"level_easy" : ["chair"],
+"level_easy" : ["dice_ice","eight_gate"],
 
-"level_medium" : ["chair","chair"],
+"level_medium" : ["dice_ice","eight_gate","ant_pants","tea_key"],
 
 "level_hard" : ["dice_ice","eight_gate","box_ox","ant_pants","pin_bin","tea_key"]
 

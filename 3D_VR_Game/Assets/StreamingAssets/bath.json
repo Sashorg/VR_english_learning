@@ -1,8 +1,8 @@
 {
 
-"level_easy" : ["chair","chair","clock","mouse","fan","bed","PC","mug","photo","lamp","closet"],
+"level_easy" : ["soap","shower","toilet","toilet paper","sink","towel"],
 
-"level_medium" : ["chair","chair"],
+"level_medium" : ["flush","soap","shower","toilet","toilet paper","sink","vase","towel"],
 
 "level_hard" : ["socket","towel rail","flush","soap","shower","toilet","toilet paper","sink","shower gel","vase","towel"]
 

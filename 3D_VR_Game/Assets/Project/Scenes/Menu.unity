@@ -4833,8 +4833,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 17e77e98bda321b4a9ee65b1e849600f, type: 3}
   - {fileID: 8300000, guid: bded12fc8ce3d2d4b84eba194af9fd6b, type: 3}
   - {fileID: 8300000, guid: d2fb3fffd3bba0845af6851a337ba094, type: 3}
-  - {fileID: 8300000, guid: 632c461031fe2eb479c411505b283971, type: 3}
-  - {fileID: 8300000, guid: 66270346357200140adf046cb807effc, type: 3}
+  - {fileID: 8300000, guid: 03c6393f2afdb614c96d27fca0a7da0a, type: 3}
+  - {fileID: 8300000, guid: 2a8ee18f7dff4934a8692d059ec4d5cb, type: 3}
   zooClips:
   - {fileID: 8300000, guid: 3c5d8780a064ce1438c62004ef9f008c, type: 3}
   - {fileID: 8300000, guid: 02bff1f8f03ad5641b17f77dec2fc9fb, type: 3}

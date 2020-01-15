@@ -8,7 +8,8 @@ public class VrEnabler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(LoadDevice("Cardboard"));    
+        if (XRSettings.loadedDeviceName == "")
+            StartCoroutine(LoadDevice("Cardboard"));    
     }
 
     IEnumerator LoadDevice(string newDevice)
