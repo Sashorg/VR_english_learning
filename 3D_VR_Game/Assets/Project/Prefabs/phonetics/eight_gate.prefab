@@ -128,6 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _object: {fileID: 0}
+  _score: {fileID: 0}
+  _find: {fileID: 0}
+  _objectText: {fileID: 0}
 --- !u!114 &258551739621629628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +243,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _object: {fileID: 0}
+  _score: {fileID: 0}
+  _find: {fileID: 0}
+  _objectText: {fileID: 0}
 --- !u!1001 &258551737823090588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,6 +425,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: gate
       objectReference: {fileID: 0}
+    - target: {fileID: 1969006008287958688, guid: 57d1a8d926901ad4d8b8ed1da016d96c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 62bfa536a7efd514abee173d5e9660fc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57d1a8d926901ad4d8b8ed1da016d96c, type: 3}
 --- !u!1 &8122068727404136369 stripped

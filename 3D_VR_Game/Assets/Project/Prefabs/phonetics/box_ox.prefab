@@ -25,6 +25,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _object: {fileID: 0}
+  _score: {fileID: 0}
+  _find: {fileID: 0}
+  _objectText: {fileID: 0}
 --- !u!114 &7554696081278420263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,6 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _object: {fileID: 0}
+  _score: {fileID: 0}
+  _find: {fileID: 0}
+  _objectText: {fileID: 0}
 --- !u!114 &7554696080730547969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +286,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 7.9896407
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 649a3df77e1518c4aa7190ea3f4b27c1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e84e71bc3e74dd7408c8d2e71a649a65, type: 2}
     - target: {fileID: -927199367670048503, guid: 649a3df77e1518c4aa7190ea3f4b27c1,
         type: 3}
       propertyPath: m_Name
@@ -374,6 +387,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 42.86412
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: c75275ae95ba7c649829df1c3db1d288,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c19bafa8b2950e47a328416600e38e4, type: 2}
     - target: {fileID: -927199367670048503, guid: c75275ae95ba7c649829df1c3db1d288,
         type: 3}
       propertyPath: m_Name

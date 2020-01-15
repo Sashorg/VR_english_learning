@@ -171,6 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21c30db0e7b78e43a6aa2990a1772d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _object: {fileID: 0}
+  _score: {fileID: 0}
+  _find: {fileID: 0}
+  _objectText: {fileID: 0}
 --- !u!1001 &448442993021844153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -328,6 +332,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pin
       objectReference: {fileID: 0}
+    - target: {fileID: 5218053877760515484, guid: f137d545c18081440a6fe9d4eeb4d25d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8687eacd1d3c9a747b7af0846a954044, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f137d545c18081440a6fe9d4eeb4d25d, type: 3}
 --- !u!1 &8437737515394555863 stripped
